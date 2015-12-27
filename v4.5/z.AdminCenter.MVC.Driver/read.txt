@@ -1,7 +1,7 @@
 ﻿MVC站点使用AdminCenter配置步骤：
 1. 在AdminCenter创建系统，并分配Code、Key
 
-2. MVC站点引用 z.AdminCenter.MVC.Driver.dll、z.AdminCenter.Logic.dll
+2. MVC站点引用 z.AdminCenter.MVC.Driver.dll
 
 3. 修改web.config：
    1> <add key="AdminCenterDomain" value="AdminCenter域名" />
