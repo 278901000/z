@@ -103,8 +103,8 @@
       <HintPath>..\..\packages\z.Foundation.1.0.0.6\lib\net45\z.Foundation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="z.Foundation.Data, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\z.Foundation.Data.1.0.0.1\lib\net45\z.Foundation.Data.dll</HintPath>
+    <Reference Include="z.Foundation.Data, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\z.Foundation.Data.1.0.0.3\lib\net45\z.Foundation.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -115,6 +115,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

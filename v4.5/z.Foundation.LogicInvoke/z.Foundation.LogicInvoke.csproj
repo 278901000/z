@@ -39,7 +39,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Gif.Components, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\z.Foundation.1.0.0.5\lib\net45\Gif.Components.dll</HintPath>
+      <HintPath>..\..\packages\z.Foundation.1.0.0.6\lib\net45\Gif.Components.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
@@ -65,8 +65,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="z.Foundation, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\z.Foundation.1.0.0.5\lib\net45\z.Foundation.dll</HintPath>
+    <Reference Include="z.Foundation, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\z.Foundation.1.0.0.6\lib\net45\z.Foundation.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
