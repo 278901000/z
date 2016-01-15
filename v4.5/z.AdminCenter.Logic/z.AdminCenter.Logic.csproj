@@ -90,6 +90,10 @@
       <HintPath>..\..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Oracle.ManagedDataAccess.12.1.2400\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -108,8 +112,8 @@
       <HintPath>..\..\packages\z.Foundation.1.0.0.6\lib\net45\z.Foundation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="z.Foundation.Data, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\z.Foundation.Data.1.0.0.3\lib\net45\z.Foundation.Data.dll</HintPath>
+    <Reference Include="z.Foundation.Data, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\z.Foundation.Data.1.0.0.4\lib\net45\z.Foundation.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="z.Logic.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "z.Lucene.Net", "v3.5\z.Luce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "z.Lucene.Net.Contrib.SpellChecker", "v3.5\z.Lucene.Net.Contrib.SpellChecker\z.Lucene.Net.Contrib.SpellChecker.csproj", "{FF45EE91-9CA3-443D-8231-75E9FA1AF40E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{D6FF9297-D733-4E34-80D0-2AF2204C8381}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,14 @@ Global
 		{FF45EE91-9CA3-443D-8231-75E9FA1AF40E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FF45EE91-9CA3-443D-8231-75E9FA1AF40E}.Release35|Any CPU.ActiveCfg = Release35|Any CPU
 		{FF45EE91-9CA3-443D-8231-75E9FA1AF40E}.Release35|Any CPU.Build.0 = Release35|Any CPU
+		{D6FF9297-D733-4E34-80D0-2AF2204C8381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FF9297-D733-4E34-80D0-2AF2204C8381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FF9297-D733-4E34-80D0-2AF2204C8381}.Debug35|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FF9297-D733-4E34-80D0-2AF2204C8381}.Debug35|Any CPU.Build.0 = Debug|Any CPU
+		{D6FF9297-D733-4E34-80D0-2AF2204C8381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FF9297-D733-4E34-80D0-2AF2204C8381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FF9297-D733-4E34-80D0-2AF2204C8381}.Release35|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FF9297-D733-4E34-80D0-2AF2204C8381}.Release35|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
