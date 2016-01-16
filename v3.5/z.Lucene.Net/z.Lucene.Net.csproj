@@ -32,7 +32,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <Framework>$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", ""))</Framework>
-    <OutputPath>..\..\build\bin\core\$(Configuration.Replace("35", ""))\$(Framework)\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -82,7 +82,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <DefineConstants>TRACE;$(Framework)</DefineConstants>
+    <DefineConstants>TRACE;NET40</DefineConstants>
     <DocumentationFile>bin\Release\z.Lucene.Net.XML</DocumentationFile>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
@@ -128,6 +128,10 @@
     <AssemblyOriginatorKeyFile>Lucene.Net.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -954,6 +958,7 @@
     <None Include="Lucene.Net.Search.TestSort.config" />
     <None Include="Lucene.Net.snk" />
     <Content Include="Analysis\Standard\READ_BEFORE_REGENERATING.txt" />
+    <None Include="packages.config" />
     <None Include="QueryParser\QueryParser.jj" />
   </ItemGroup>
   <ItemGroup>
