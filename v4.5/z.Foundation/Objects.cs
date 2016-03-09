@@ -149,7 +149,14 @@ namespace z.Foundation
                         continue;
                     }
 
-                    propertyInfo.SetValue(model, dataRow[propertyInfo.Name], null);
+                    if (propertyInfo.PropertyType.Name == "Boolean")
+                    {
+                        propertyInfo.SetValue(model, Convert.ToBoolean(dataRow[propertyInfo.Name]), null);
+                    }
+                    else
+                    {
+                        propertyInfo.SetValue(model, dataRow[propertyInfo.Name], null);
+                    }
                 }
                 list.Add(model);
             }
