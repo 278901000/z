@@ -170,6 +170,7 @@
     <Compile Include="Analysis\LetterTokenizer.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Analysis\zWhitespaceAnalyzer.cs" />
     <Compile Include="Analysis\LowerCaseFilter.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -241,6 +242,7 @@
     <Compile Include="Analysis\WordlistLoader.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Analysis\zWhitespaceTokenizer.cs" />
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
