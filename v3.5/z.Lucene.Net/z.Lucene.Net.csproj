@@ -170,7 +170,6 @@
     <Compile Include="Analysis\LetterTokenizer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Analysis\zWhitespaceAnalyzer.cs" />
     <Compile Include="Analysis\LowerCaseFilter.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -242,7 +241,6 @@
     <Compile Include="Analysis\WordlistLoader.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Analysis\zWhitespaceTokenizer.cs" />
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -955,6 +953,8 @@
     </Compile>
     <Compile Include="Util\UnicodeUtil.cs" />
     <Compile Include="Util\Version.cs" />
+    <Compile Include="Analysis\zWhitespaceAnalyzer.cs" />
+    <Compile Include="Analysis\zWhitespaceTokenizer.cs" />
     <None Include="Analysis\Standard\StandardTokenizerImpl.jflex" />
     <None Include="Lucene.Net.Search.RemoteSearchable.config" />
     <None Include="Lucene.Net.Search.TestSort.config" />
