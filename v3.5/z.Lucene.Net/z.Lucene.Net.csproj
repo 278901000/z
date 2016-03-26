@@ -177,7 +177,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Analysis\MappingCharFilter.cs" />
+    <Compile Include="Analysis\NoAnalyzer.cs" />
     <Compile Include="Analysis\NormalizeCharMap.cs" />
+    <Compile Include="Analysis\NoTokenizer.cs" />
     <Compile Include="Analysis\NumericTokenStream.cs" />
     <Compile Include="Analysis\PerFieldAnalyzerWrapper.cs">
       <SubType>Code</SubType>
@@ -953,8 +955,6 @@
     </Compile>
     <Compile Include="Util\UnicodeUtil.cs" />
     <Compile Include="Util\Version.cs" />
-    <Compile Include="Analysis\zWhitespaceAnalyzer.cs" />
-    <Compile Include="Analysis\zWhitespaceTokenizer.cs" />
     <None Include="Analysis\Standard\StandardTokenizerImpl.jflex" />
     <None Include="Lucene.Net.Search.RemoteSearchable.config" />
     <None Include="Lucene.Net.Search.TestSort.config" />
