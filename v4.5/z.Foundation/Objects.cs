@@ -162,5 +162,16 @@ namespace z.Foundation
             }
             return list;
         }
+
+        /// <summary>
+        /// GUID转换为LONG类型（可用于订单号等唯一单号的生成使用，但此方法理论上不是绝对唯一，对应数据库字段需设置唯一性约束）
+        /// </summary>
+        /// <param name="guid"></param>
+        /// <returns></returns>
+        public static long GuidToLong(this Guid guid)
+        {
+            byte[] buffer = Guid.NewGuid().ToByteArray();
+            return BitConverter.ToInt64(buffer, 0);
+        }
     }
 }
