@@ -302,6 +302,7 @@ namespace z.AdminCenter.MVC.Driver
                 byte[] bytePostData = Encoding.GetEncoding("utf-8").GetBytes(strPostData);
 
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(string.Format("http://{0}/AuthAPI.aspx", AdminCenterDomain));
+                request.Proxy = new WebProxy();
                 request.UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36";
                 request.Method = "POST";
                 request.ContentType = "application/x-www-form-urlencoded";
