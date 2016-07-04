@@ -120,7 +120,7 @@ namespace z.Foundation
         /// <typeparam name="T"></typeparam>
         /// <param name="dataTable"></param>
         /// <returns></returns>
-        public static List<T> DataTableToModel<T>(this DataTable dataTable) where T : class,new()
+        public static List<T> DataTableToModel<T>(this DataTable dataTable) where T : class, new()
         {
             List<T> list = new List<T>();
             Type type = typeof(T);
@@ -149,7 +149,8 @@ namespace z.Foundation
                         continue;
                     }
 
-                    if (propertyInfo.PropertyType.Name == "Boolean")
+                    //此判断用于兼容MySql中设置Boolean类型值为Bit类型产生的类型转换错误
+                    if (propertyInfo.PropertyType.FullName.IndexOf("System.Boolean") > -1)
                     {
                         propertyInfo.SetValue(model, Convert.ToBoolean(dataRow[propertyInfo.Name]), null);
                     }
