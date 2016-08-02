@@ -123,6 +123,20 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\v2.0\z.PanGu\z.PanGu.csproj">
+      <Project>{091e1c60-f77b-45a1-844c-86c5f508b57b}</Project>
+      <Name>z.PanGu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\v3.5\PanGu.Lucene.Analyzer\z.PanGu.Lucene.Analyzer.csproj">
+      <Project>{5a6afb41-632d-46c0-b1ab-eb8b10c70a2a}</Project>
+      <Name>z.PanGu.Lucene.Analyzer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\v3.5\z.Lucene.Net\z.Lucene.Net.csproj">
+      <Project>{5d4ad9be-1ffb-41ab-9943-25737971bf57}</Project>
+      <Name>z.Lucene.Net</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
