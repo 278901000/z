@@ -392,6 +392,8 @@ namespace z.Foundation
                     #endregion
 
                     break;
+                default:
+                    return false;
             }
 
             return true;
