@@ -12,7 +12,6 @@
 		<property name="CallBackUrl" type="System.String" column="CallBackUrl" not-null="true" />
 		<property name="Logo" type="System.String" column="Logo" not-null="false" />
 		<property name="Deleted" type="System.Boolean" column="Deleted" not-null="true" />
-		<property name="BrotherSystemId" type="System.Int32" column="BrotherSystemId" not-null="false" />
 		<property name="CreateBy" type="System.String" column="CreateBy" not-null="true" />
 		<property name="CreateOn" type="System.DateTime" column="CreateOn" not-null="true" />
 		<property name="UpdateBy" type="System.String" column="UpdateBy" not-null="false" />

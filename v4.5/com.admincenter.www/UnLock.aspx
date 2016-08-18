@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UnLock.aspx.cs" Inherits="com.admincenter.www.UnLock" %>
 
-<%@ Import Namespace="Logic.AdminCenter" %>
+<%@ Import Namespace="z.AdminCenter.Logic" %>
 
 <!DOCTYPE html>
 

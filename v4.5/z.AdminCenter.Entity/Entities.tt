@@ -189,7 +189,7 @@ using z.Foundation.Data;
 
 namespace<#= classItem.Namespace #>
 {
-	[Serializable, CustomData(ConnectionName = "InvoicingDB"), Table("<#= classItem.TableName #>")]
+	[Serializable, CustomData(ConnectionName = "AdminCenterDB"), Table("<#= classItem.TableName #>")]
 	public partial class <#= classItem.EntityName #> : EntityBase
     {
 <# 

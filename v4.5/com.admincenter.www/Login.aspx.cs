@@ -75,7 +75,7 @@ namespace com.admincenter.www
                 adminUserExt.AdminName = username;
                 adminUserExt.Password = password.MD5Encrypt();
                 adminUserExt.RememberMe = remember;
-                IResponse<BoolResult<AdminUserExt>> response = CallLogic<AdminUserExt, BoolResult<AdminUserExt>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminAccountManage", "Login", adminUserExt);
+                IResponse<BoolResult<AdminUserExt>> response = CallLogic<AdminUserExt, BoolResult<AdminUserExt>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminAccountManage", "Login", adminUserExt);
 
                 //业务逻辑处理结果集系列判断
                 if (response.Succeeded)

@@ -8,7 +8,7 @@ using z.Foundation.Data;
 
 namespace z.AdminCenter.Entity
 {
-	[Serializable, CustomData(ConnectionName = "InvoicingDB"), Table("admin_system")]
+	[Serializable, CustomData(ConnectionName = "AdminCenterDB"), Table("admin_system")]
 	public partial class admin_system : EntityBase
     {
 		/// <summary>
@@ -96,16 +96,6 @@ namespace z.AdminCenter.Entity
 		/// </summary>
 		[Column("Deleted")]
 		public virtual Boolean Deleted
-        {
-            get;
-            set;
-        }
-
-		/// <summary>
-		///
-		/// </summary>
-		[Column("BrotherSystemId")]
-		public virtual Int32? BrotherSystemId
         {
             get;
             set;

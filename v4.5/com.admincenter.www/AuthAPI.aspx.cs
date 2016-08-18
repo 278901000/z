@@ -12,7 +12,7 @@ namespace com.admincenter.www
         {
             if (Request.HttpMethod == "POST")
             {
-                IResponse<BoolResult> response = CallLogic<NameValueCollection, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminAccountManage", "Authentication", Request.Form);
+                IResponse<BoolResult> response = CallLogic<NameValueCollection, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminAccountManage", "Authentication", Request.Form);
                 if (response.Succeeded)
                 {
                     Response.Write(response.Result.Message);

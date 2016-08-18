@@ -12,7 +12,7 @@ namespace com.admincenter.www
 
             if (!string.IsNullOrEmpty(strTicket))
             {
-                CallLogic<string, object>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminAccountManage", "Lock", strTicket);
+                CallLogic<string, object>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminAccountManage", "Lock", strTicket);
             }
 
             strTo = Server.UrlDecode(strTo);

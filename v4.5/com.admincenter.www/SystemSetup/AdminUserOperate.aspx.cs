@@ -75,19 +75,19 @@ namespace com.admincenter.www.SystemSetup
         /// </summary>
         private void PageResource()
         {
-            IResponse<string> response1 = CallLogic<object, string>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminPermissionManage", "GetAllSystemPermissionZTreeJson", null);
+            IResponse<string> response1 = CallLogic<object, string>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminPermissionManage", "GetAllSystemPermissionZTreeJson", null);
             if (response1.Succeeded)
             {
                 g_strJson = response1.Result;
             }
 
-            IResponse<IList<admin_group>> response2 = CallLogic<object, IList<admin_group>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminGroupManage", "GetList", null);
+            IResponse<IList<admin_group>> response2 = CallLogic<object, IList<admin_group>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminGroupManage", "GetList", null);
             if (response2.Succeeded)
             {
                 g_AdminGroupList = response2.Result;
             }
 
-            IResponse<IList<admin_system>> response3 = CallLogic<object, IList<admin_system>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminSystemManage", "GetList", null);
+            IResponse<IList<admin_system>> response3 = CallLogic<object, IList<admin_system>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminSystemManage", "GetList", null);
             if (response3.Succeeded)
             {
                 g_AdminSystemList = response3.Result;
@@ -200,7 +200,7 @@ namespace com.admincenter.www.SystemSetup
                 }
 
                 //AddToDB逻辑调用
-                IResponse<BoolResult> response = CallLogic<AdminUserExt, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminUserManage", "Save", _admin_user);
+                IResponse<BoolResult> response = CallLogic<AdminUserExt, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminUserManage", "Save", _admin_user);
                 if (response.Succeeded && response.Result.Succeeded)
                 {
                     Session["Msg"] = "管理员用户添加成功";
@@ -223,7 +223,7 @@ namespace com.admincenter.www.SystemSetup
             if (UpdateBefore())
             {
                 //GetModel逻辑调用
-                IResponse<AdminUserExt> response = CallLogic<int, AdminUserExt>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminUserManage", "Get", int.Parse(Request.Params["id"]));
+                IResponse<AdminUserExt> response = CallLogic<int, AdminUserExt>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminUserManage", "Get", int.Parse(Request.Params["id"]));
                 if (response.Succeeded && response.Result != null)
                 {
                     g_strAdminName = response.Result.AdminName;
@@ -253,7 +253,7 @@ namespace com.admincenter.www.SystemSetup
                 {
                     //判断是否有更新图片
                     //若更新了图片，则需要删除旧的图片
-                    IResponse<admin_user> responseTemp = CallLogic<int, admin_user>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminUserManage", "GetModel", _admin_user.AdminUserId);
+                    IResponse<admin_user> responseTemp = CallLogic<int, admin_user>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminUserManage", "GetModel", _admin_user.AdminUserId);
                     if (responseTemp.Succeeded && responseTemp.Result != null)
                     {
                         if (_admin_user.Logo != responseTemp.Result.Logo)
@@ -266,7 +266,7 @@ namespace com.admincenter.www.SystemSetup
                         }
 
                         //UpdateToDB逻辑调用
-                        IResponse<BoolResult> response = CallLogic<AdminUserExt, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminUserManage", "Update", _admin_user);
+                        IResponse<BoolResult> response = CallLogic<AdminUserExt, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminUserManage", "Update", _admin_user);
                         if (response.Succeeded && response.Result.Succeeded)
                         {
                             Session["msg"] = "管理员用户更新成功";

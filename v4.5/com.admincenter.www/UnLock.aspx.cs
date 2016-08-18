@@ -35,7 +35,7 @@ namespace com.admincenter.www
 
         private AdminUserExt UnLockGet(string strTicket, string strTo)
         {
-            IResponse<BoolResult<AdminUserExt>> response = CallLogic<string, BoolResult<AdminUserExt>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminAccountManage", "UnLockAuthentication", strTicket);
+            IResponse<BoolResult<AdminUserExt>> response = CallLogic<string, BoolResult<AdminUserExt>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminAccountManage", "UnLockAuthentication", strTicket);
             if (response.Succeeded)
             {
                 if (response.Result.Succeeded)
@@ -86,7 +86,7 @@ namespace com.admincenter.www
                 param.AdminName = adminUserExt.AdminName;
                 param.Password = strPassword.MD5Encrypt();
 
-                IResponse<bool> response = CallLogic<AdminUserExt, bool>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminAccountManage", "UnLock", param);
+                IResponse<bool> response = CallLogic<AdminUserExt, bool>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminAccountManage", "UnLock", param);
                 if (response.Succeeded)
                 {
                     if (response.Result)

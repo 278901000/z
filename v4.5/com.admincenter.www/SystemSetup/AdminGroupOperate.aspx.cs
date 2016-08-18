@@ -66,13 +66,13 @@ namespace com.admincenter.www.SystemSetup
         /// </summary>
         private void PageResource()
         {
-            IResponse<string> response = CallLogic<object, string>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminPermissionManage", "GetAllSystemPermissionZTreeJson", null);
+            IResponse<string> response = CallLogic<object, string>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminPermissionManage", "GetAllSystemPermissionZTreeJson", null);
             if (response.Succeeded)
             {
                 g_strJson = response.Result;
             }
 
-            IResponse<IList<admin_system>> response2 = CallLogic<object, IList<admin_system>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminSystemManage", "GetList", null);
+            IResponse<IList<admin_system>> response2 = CallLogic<object, IList<admin_system>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminSystemManage", "GetList", null);
             if (response2.Succeeded)
             {
                 g_AdminSystemList = response2.Result;
@@ -184,7 +184,7 @@ namespace com.admincenter.www.SystemSetup
             if (_admin_group != null)
             {
                 //AddToDB逻辑调用
-                IResponse<BoolResult> response = CallLogic<AdminGroupExt, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminGroupManage", "Save", _admin_group);
+                IResponse<BoolResult> response = CallLogic<AdminGroupExt, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminGroupManage", "Save", _admin_group);
                 if (response.Succeeded && response.Result.Succeeded)
                 {
                     Session["Msg"] = "管理员组添加成功";
@@ -207,7 +207,7 @@ namespace com.admincenter.www.SystemSetup
             if (UpdateBefore())
             {
                 //GetModel逻辑调用
-                IResponse<AdminGroupExt> response = CallLogic<int, AdminGroupExt>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminGroupManage", "Get", int.Parse(Request.Params["id"]));
+                IResponse<AdminGroupExt> response = CallLogic<int, AdminGroupExt>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminGroupManage", "Get", int.Parse(Request.Params["id"]));
                 if (response.Succeeded && response.Result != null)
                 {
                     g_strName = response.Result.Name;
@@ -235,7 +235,7 @@ namespace com.admincenter.www.SystemSetup
                 if (_admin_group != null)
                 {
                     //UpdateToDB逻辑调用
-                    IResponse<BoolResult> response = CallLogic<AdminGroupExt, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminGroupManage", "Update", _admin_group);
+                    IResponse<BoolResult> response = CallLogic<AdminGroupExt, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminGroupManage", "Update", _admin_group);
                     if (response.Succeeded && response.Result.Succeeded)
                     {
                         Session["msg"] = "管理员组更新成功";

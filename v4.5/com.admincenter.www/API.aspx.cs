@@ -25,12 +25,12 @@ namespace com.admincenter.www
             nvc.Add("authCode", Request.Params["authCode"]);
             nvc.Add("authTime", Request.Params["authTime"]);
 
-            IResponse<BoolResult> response = CallLogic<NameValueCollection, BoolResult>("Logic.AdminCenter", "Logic.AdminCenter.Authentication", "Verify", nvc);
+            IResponse<BoolResult> response = CallLogic<NameValueCollection, BoolResult>("z.AdminCenter.Logic", "z.AdminCenter.Logic.Authentication", "Verify", nvc);
             if(response.Succeeded)
             {
                 if(response.Result.Succeeded)
                 {
-                    IResponse<IList<admin_user>> responseData = CallLogic<object, IList<admin_user>>("Logic.AdminCenter", "Logic.AdminCenter.AdminUserManage", "GetList", null);
+                    IResponse<IList<admin_user>> responseData = CallLogic<object, IList<admin_user>>("z.AdminCenter.Logic", "z.AdminCenter.Logic.AdminUserManage", "GetList", null);
                     if (responseData.Succeeded)
                     {
                         result.Result = responseData.Result;

@@ -42,7 +42,7 @@ namespace com.admincenter.www.SystemSetup
 
         private void GetList()
         {
-            IResponse<string> response = CallLogic<object, string>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminPermissionManage", "GetSortPermissionZTreeJson", null);
+            IResponse<string> response = CallLogic<object, string>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminPermissionManage", "GetSortPermissionZTreeJson", null);
             if (response.Succeeded)
             {
                 g_strJson = response.Result;
@@ -103,7 +103,7 @@ namespace com.admincenter.www.SystemSetup
             permissionSort.TargetNode.UpdateBy = AdminUser.AdminName;
             permissionSort.TargetNode.UpdateOn = DateTime.UtcNow;
             permissionSort.Next = strMoveType == "next" ? true : false;
-            IResponse<BoolResult> response = CallLogic<PermissionSort, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminPermissionManage", "Sort", permissionSort);
+            IResponse<BoolResult> response = CallLogic<PermissionSort, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminPermissionManage", "Sort", permissionSort);
             if (response.Succeeded)
             {
                 if (response.Result.Succeeded)

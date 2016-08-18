@@ -61,7 +61,7 @@ namespace com.admincenter.www
         /// </summary>
         private AdminUserExt UpdateGET(string strTicket, string strTo)
         {
-            IResponse<BoolResult<AdminUserExt>> response = CallLogic<string[], BoolResult<AdminUserExt>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminAccountManage", "BaseAuthentication", new string[] { strTicket, "UpdateProfile" });
+            IResponse<BoolResult<AdminUserExt>> response = CallLogic<string[], BoolResult<AdminUserExt>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminAccountManage", "BaseAuthentication", new string[] { strTicket, "UpdateProfile" });
             if (response.Succeeded)
             {
                 if (response.Result.Succeeded)
@@ -144,7 +144,7 @@ namespace com.admincenter.www
                     }
                 }
 
-                IResponse<bool> responseUpdate = CallLogic<AdminUserExt, bool>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminAccountManage", "UpdateProfile", param);
+                IResponse<bool> responseUpdate = CallLogic<AdminUserExt, bool>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminAccountManage", "UpdateProfile", param);
                 if (responseUpdate.Succeeded)
                 {
                     if (responseUpdate.Result)
@@ -185,7 +185,7 @@ namespace com.admincenter.www
             jsonResult.Succeeded = false;
             jsonResult.MsgType = JsonResult.MessageType.error.ToString();
 
-            IResponse<BoolResult<AdminUserExt>> response = CallLogic<string[], BoolResult<AdminUserExt>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminAccountManage", "BaseAuthentication", new string[] { strTicket, "UpdateProfile" });
+            IResponse<BoolResult<AdminUserExt>> response = CallLogic<string[], BoolResult<AdminUserExt>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminAccountManage", "BaseAuthentication", new string[] { strTicket, "UpdateProfile" });
             if (response.Succeeded)
             {
                 if (response.Result.Succeeded)

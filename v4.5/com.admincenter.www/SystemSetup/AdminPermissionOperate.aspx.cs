@@ -76,7 +76,7 @@ namespace com.admincenter.www.SystemSetup
         /// </summary>
         private void PageResource()
         {
-            IResponse<IList<admin_system>> response = CallLogic<object, IList<admin_system>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminSystemManage", "GetList", null);
+            IResponse<IList<admin_system>> response = CallLogic<object, IList<admin_system>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminSystemManage", "GetList", null);
             if (response.Succeeded)
             {
                 g_AdminSystems = response.Result;
@@ -226,7 +226,7 @@ namespace com.admincenter.www.SystemSetup
             if (_admin_permission != null)
             {
                 //AddToDB逻辑调用
-                IResponse<BoolResult> response = CallLogic<admin_permission, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminPermissionManage", "Save", _admin_permission);
+                IResponse<BoolResult> response = CallLogic<admin_permission, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminPermissionManage", "Save", _admin_permission);
                 if (response.Succeeded && response.Result.Succeeded)
                 {
                     Session["Msg"] = "系统权限添加成功";
@@ -249,7 +249,7 @@ namespace com.admincenter.www.SystemSetup
             if (UpdateBefore())
             {
                 //GetModel逻辑调用
-                IResponse<admin_permission> response = CallLogic<int, admin_permission>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminPermissionManage", "Get", int.Parse(Request.Params["id"]));
+                IResponse<admin_permission> response = CallLogic<int, admin_permission>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminPermissionManage", "Get", int.Parse(Request.Params["id"]));
                 if (response.Succeeded && response.Result != null)
                 {
                     g_strSystemId = response.Result.SystemId.ToString();
@@ -283,7 +283,7 @@ namespace com.admincenter.www.SystemSetup
                 if (_admin_permission != null)
                 {
                     //UpdateToDB逻辑调用
-                    IResponse<BoolResult> response = CallLogic<admin_permission, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminPermissionManage", "Update", _admin_permission);
+                    IResponse<BoolResult> response = CallLogic<admin_permission, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminPermissionManage", "Update", _admin_permission);
                     if (response.Succeeded && response.Result.Succeeded)
                     {
                         Session["msg"] = "系统权限更新成功";
@@ -328,7 +328,7 @@ namespace com.admincenter.www.SystemSetup
                 Response.End();
             }
 
-            IResponse<string> response = CallLogic<int, string>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminPermissionManage", "GetSpecifySystemPermissionZTreeJson", intId);
+            IResponse<string> response = CallLogic<int, string>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminPermissionManage", "GetSpecifySystemPermissionZTreeJson", intId);
             if (response.Succeeded)
             {
                 JsonResult jsonResult = new JsonResult();

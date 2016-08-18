@@ -1,0 +1,179 @@
+
+时间:2016-08-18 14:09:50,180 - INFO :Application_Start:2016/8/18 14:09:49
+
+时间:2016-08-18 14:09:52,565 - INFO :UpdateAllUserSession_True_2016/8/18 14:09:52
+
+时间:2016-08-18 14:10:52,565 - INFO :UpdateAllUserSession_True_2016/8/18 14:10:52
+
+时间:2016-08-18 14:11:52,566 - INFO :UpdateAllUserSession_True_2016/8/18 14:11:52
+
+时间:2016-08-18 14:12:52,567 - INFO :UpdateAllUserSession_True_2016/8/18 14:12:52
+
+时间:2016-08-18 14:13:52,567 - INFO :UpdateAllUserSession_True_2016/8/18 14:13:52
+
+时间:2016-08-18 14:14:52,568 - INFO :UpdateAllUserSession_True_2016/8/18 14:14:52
+
+时间:2016-08-18 14:15:11,239 - ERROR:无法将类型为“z.AdminCenter.Logic.AdminUserExt”的对象强制转换为类型“Logic.AdminCenter.AdminUserExt”。
+调用:Target:Logic.AdminCenter.dll | Class:Logic.AdminCenter.AdminAccountManage | Method:Login | Parameter:参数不为null
+System.InvalidCastException: 无法将类型为“z.AdminCenter.Logic.AdminUserExt”的对象强制转换为类型“Logic.AdminCenter.AdminUserExt”。
+   在 lambda_method(Closure , Object , Object[] )
+   在 z.Foundation.LogicInvoke.DynamicMethodExecutor.Execute(Object instance, Object[] parameters) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicMethodExecutor.cs:行号 24
+   在 z.Foundation.LogicInvoke.DynamicInvoke.Invoke(String Target, String Class, String Method, Object Parameter) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicInvoke.cs:行号 74
+   在 z.Foundation.LogicInvoke.DynamicInvoke.Call[T1](IRequest`1 request) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicInvoke.cs:行号 35
+   在 z.Foundation.LogicInvoke.LocalLogicTunnel.Call[T1,T2](IRequest`1 request) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\LocalLogicTunnel.cs:行号 50
+
+时间:2016-08-18 14:15:52,568 - INFO :UpdateAllUserSession_True_2016/8/18 14:15:52
+
+时间:2016-08-18 14:16:52,569 - INFO :UpdateAllUserSession_True_2016/8/18 14:16:52
+
+时间:2016-08-18 14:17:52,569 - INFO :UpdateAllUserSession_True_2016/8/18 14:17:52
+
+时间:2016-08-18 14:18:52,569 - INFO :UpdateAllUserSession_True_2016/8/18 14:18:52
+
+时间:2016-08-18 14:19:52,570 - INFO :UpdateAllUserSession_True_2016/8/18 14:19:52
+
+时间:2016-08-18 14:20:52,570 - INFO :UpdateAllUserSession_True_2016/8/18 14:20:52
+
+时间:2016-08-18 14:21:52,571 - INFO :UpdateAllUserSession_True_2016/8/18 14:21:52
+
+时间:2016-08-18 14:22:24,161 - ERROR:无法将类型为“z.AdminCenter.Logic.AdminUserExt”的对象强制转换为类型“Logic.AdminCenter.AdminUserExt”。
+调用:Target:Logic.AdminCenter.dll | Class:Logic.AdminCenter.AdminAccountManage | Method:Login | Parameter:参数不为null
+System.InvalidCastException: 无法将类型为“z.AdminCenter.Logic.AdminUserExt”的对象强制转换为类型“Logic.AdminCenter.AdminUserExt”。
+   在 lambda_method(Closure , Object , Object[] )
+   在 z.Foundation.LogicInvoke.DynamicMethodExecutor.Execute(Object instance, Object[] parameters) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicMethodExecutor.cs:行号 24
+   在 z.Foundation.LogicInvoke.DynamicInvoke.Invoke(String Target, String Class, String Method, Object Parameter) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicInvoke.cs:行号 74
+   在 z.Foundation.LogicInvoke.DynamicInvoke.Call[T1](IRequest`1 request) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicInvoke.cs:行号 35
+   在 z.Foundation.LogicInvoke.LocalLogicTunnel.Call[T1,T2](IRequest`1 request) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\LocalLogicTunnel.cs:行号 50
+
+时间:2016-08-18 14:22:52,572 - INFO :UpdateAllUserSession_True_2016/8/18 14:22:52
+
+时间:2016-08-18 14:23:49,500 - ERROR:无法将类型为“z.AdminCenter.Logic.AdminUserExt”的对象强制转换为类型“Logic.AdminCenter.AdminUserExt”。
+调用:Target:Logic.AdminCenter.dll | Class:Logic.AdminCenter.AdminAccountManage | Method:Login | Parameter:参数不为null
+System.InvalidCastException: 无法将类型为“z.AdminCenter.Logic.AdminUserExt”的对象强制转换为类型“Logic.AdminCenter.AdminUserExt”。
+   在 lambda_method(Closure , Object , Object[] )
+   在 z.Foundation.LogicInvoke.DynamicMethodExecutor.Execute(Object instance, Object[] parameters) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicMethodExecutor.cs:行号 24
+   在 z.Foundation.LogicInvoke.DynamicInvoke.Invoke(String Target, String Class, String Method, Object Parameter) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicInvoke.cs:行号 74
+   在 z.Foundation.LogicInvoke.DynamicInvoke.Call[T1](IRequest`1 request) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicInvoke.cs:行号 35
+   在 z.Foundation.LogicInvoke.LocalLogicTunnel.Call[T1,T2](IRequest`1 request) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\LocalLogicTunnel.cs:行号 50
+
+时间:2016-08-18 14:24:22,554 - INFO :UpdateAllUserSession_True_2016/8/18 14:24:22
+
+时间:2016-08-18 14:25:06,836 - INFO :Application_End:2016/8/18 14:25:06
+
+时间:2016-08-18 14:25:06,858 - INFO :
+
+_shutDownMessage=IIS configuration change
+HostingEnvironment initiated shutdown
+CONFIG change
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.Hosting.PipelineRuntime.StopProcessing()
+
+_shutdownReason=ConfigurationChange
+
+时间:2016-08-18 14:25:26,629 - INFO :Application_Start:2016/8/18 14:25:26
+
+时间:2016-08-18 14:25:26,725 - INFO :UpdateAllUserSession_True_2016/8/18 14:25:26
+
+时间:2016-08-18 14:26:26,725 - INFO :UpdateAllUserSession_True_2016/8/18 14:26:26
+
+时间:2016-08-18 14:27:00,561 - INFO :Application_End:2016/8/18 14:27:00
+
+时间:2016-08-18 14:27:00,562 - INFO :
+
+_shutDownMessage=关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment initiated shutdown
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   在 System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+
+_shutdownReason=BinDirChangeOrDirectoryRename
+
+时间:2016-08-18 14:27:07,799 - INFO :Application_Start:2016/8/18 14:27:07
+
+时间:2016-08-18 14:27:07,852 - INFO :UpdateAllUserSession_True_2016/8/18 14:27:07
+
+时间:2016-08-18 14:28:07,852 - INFO :UpdateAllUserSession_True_2016/8/18 14:28:07
+
+时间:2016-08-18 14:29:07,853 - INFO :UpdateAllUserSession_True_2016/8/18 14:29:07
+
+时间:2016-08-18 14:30:07,853 - INFO :UpdateAllUserSession_True_2016/8/18 14:30:07
+
+时间:2016-08-18 14:30:54,103 - ERROR:找不到网络路径。
+调用:Target:z.AdminCenter.Logic.dll | Class:z.AdminCenter.Logic.AdminAccountManage | Method:Login | Parameter:参数不为null
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   在 NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare()
+   在 NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper)
+   在 NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory)
+   在 NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners)
+   在 NHibernate.Cfg.Configuration.BuildSessionFactory()
+   在 z.Foundation.Data.NHibernateHelper`1.get_SessionFactory() 位置 D:\project\z\v4.5\z.Foundation.Data\NHibernateHelper.cs:行号 30
+   在 z.Foundation.Data.NHibernateHelper`1.OpenSession() 位置 D:\project\z\v4.5\z.Foundation.Data\NHibernateHelper.cs:行号 42
+   在 z.Foundation.Data.NHibernateRepository.First[T](Expression`1 expression) 位置 D:\project\z\v4.5\z.Foundation.Data\NHibernateRepository.cs:行号 65
+   在 z.AdminCenter.Logic.AdminAccountManage.Login(AdminUserExt param) 位置 D:\project\z\v4.5\z.AdminCenter.Logic\AdminAccountManage.cs:行号 56
+   在 lambda_method(Closure , Object , Object[] )
+   在 z.Foundation.LogicInvoke.DynamicMethodExecutor.Execute(Object instance, Object[] parameters) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicMethodExecutor.cs:行号 24
+   在 z.Foundation.LogicInvoke.DynamicInvoke.Invoke(String Target, String Class, String Method, Object Parameter) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicInvoke.cs:行号 74
+   在 z.Foundation.LogicInvoke.DynamicInvoke.Call[T1](IRequest`1 request) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\DynamicInvoke.cs:行号 35
+   在 z.Foundation.LogicInvoke.LocalLogicTunnel.Call[T1,T2](IRequest`1 request) 位置 D:\project\z\v4.5\z.Foundation.LogicInvoke\LocalLogicTunnel.cs:行号 50
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+时间:2016-08-18 14:31:11,556 - INFO :UpdateAllUserSession_True_2016/8/18 14:31:11
+
+时间:2016-08-18 14:32:11,556 - INFO :UpdateAllUserSession_True_2016/8/18 14:32:11
+
+时间:2016-08-18 14:33:11,557 - INFO :UpdateAllUserSession_True_2016/8/18 14:33:11
+
+时间:2016-08-18 14:34:11,559 - INFO :UpdateAllUserSession_True_2016/8/18 14:34:11
+
+时间:2016-08-18 14:34:14,742 - INFO :Application_Start:2016/8/18 14:34:14
+
+时间:2016-08-18 14:34:15,005 - INFO :UpdateAllUserSession_True_2016/8/18 14:34:15

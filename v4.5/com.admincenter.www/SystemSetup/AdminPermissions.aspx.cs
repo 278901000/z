@@ -57,7 +57,7 @@ namespace com.admincenter.www.SystemSetup
         /// </summary>
         private void PageResource()
         {
-            IResponse<IList<admin_system>> response = CallLogic<object, IList<admin_system>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminSystemManage", "GetList", null);
+            IResponse<IList<admin_system>> response = CallLogic<object, IList<admin_system>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminSystemManage", "GetList", null);
             if (response.Succeeded)
             {
                 g_AdminSystems = response.Result;
@@ -95,7 +95,7 @@ namespace com.admincenter.www.SystemSetup
             param.PageIndex = intPage;
             param.PageSize = intPageSize;
 
-            IResponse<IPagedList<admin_permission>> response = CallLogic<IPagedParam<admin_permission>, IPagedList<admin_permission>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminPermissionManage", "GetPageList", param);
+            IResponse<IPagedList<admin_permission>> response = CallLogic<IPagedParam<admin_permission>, IPagedList<admin_permission>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminPermissionManage", "GetPageList", param);
             if (response.Succeeded)
             {
                 g_AdminPermissions = response.Result;
@@ -153,7 +153,7 @@ namespace com.admincenter.www.SystemSetup
             adminPermissionExt.UpdateBy = AdminUser.AdminName;
             adminPermissionExt.UpdateOn = DateTime.UtcNow;
 
-            IResponse<BoolResult> response = CallLogic<AdminPermissionExt, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminPermissionManage", "Deleted", adminPermissionExt);
+            IResponse<BoolResult> response = CallLogic<AdminPermissionExt, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminPermissionManage", "Deleted", adminPermissionExt);
             if (response.Succeeded)
             {
                 if (response.Result.Succeeded)
@@ -250,7 +250,7 @@ namespace com.admincenter.www.SystemSetup
             adminPermissionExt.UpdateBy = AdminUser.AdminName;
             adminPermissionExt.UpdateOn = DateTime.UtcNow;
 
-            IResponse<BoolResult> response = CallLogic<AdminPermissionExt, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminPermissionManage", "Disabled", adminPermissionExt);
+            IResponse<BoolResult> response = CallLogic<AdminPermissionExt, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminPermissionManage", "Disabled", adminPermissionExt);
             if (response.Succeeded)
             {
                 if (response.Result.Succeeded)

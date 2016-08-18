@@ -195,7 +195,7 @@ namespace com.admincenter.www.SystemSetup
                 }
 
                 //AddToDB逻辑调用
-                IResponse<BoolResult> response = CallLogic<admin_system, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminSystemManage", "Save", _admin_system);
+                IResponse<BoolResult> response = CallLogic<admin_system, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminSystemManage", "Save", _admin_system);
                 if (response.Succeeded && response.Result.Succeeded)
                 {
                     Session["Msg"] = "系统添加成功";
@@ -218,7 +218,7 @@ namespace com.admincenter.www.SystemSetup
             if (UpdateBefore())
             {
                 //GetModel逻辑调用
-                IResponse<admin_system> response = CallLogic<int, admin_system>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminSystemManage", "Get", int.Parse(Request.Params["id"]));
+                IResponse<admin_system> response = CallLogic<int, admin_system>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminSystemManage", "Get", int.Parse(Request.Params["id"]));
                 if (response.Succeeded && response.Result != null)
                 {
                     g_strName = response.Result.Name;
@@ -250,7 +250,7 @@ namespace com.admincenter.www.SystemSetup
                 {
                     //判断是否有更新图片
                     //若更新了图片，则需要删除旧的图片
-                    IResponse<admin_system> responseTemp = CallLogic<int, admin_system>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminSystemManage", "Get", _admin_system.AdminSystemId);
+                    IResponse<admin_system> responseTemp = CallLogic<int, admin_system>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminSystemManage", "Get", _admin_system.AdminSystemId);
                     if (responseTemp.Succeeded && responseTemp.Result != null)
                     {
                         if (_admin_system.Logo != responseTemp.Result.Logo)
@@ -263,7 +263,7 @@ namespace com.admincenter.www.SystemSetup
                         }
 
                         //UpdateToDB逻辑调用
-                        IResponse<BoolResult> response = CallLogic<admin_system, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminSystemManage", "Update", _admin_system);
+                        IResponse<BoolResult> response = CallLogic<admin_system, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminSystemManage", "Update", _admin_system);
                         if (response.Succeeded && response.Result.Succeeded)
                         {
                             Session["msg"] = "系统更新成功";

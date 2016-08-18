@@ -65,7 +65,7 @@ namespace com.admincenter.www.SystemSetup
             param.PageIndex = intPage;
             param.PageSize = intPageSize;
 
-            IResponse<IPagedList<admin_system>> response = CallLogic<IPagedParam<admin_system>, IPagedList<admin_system>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminSystemManage", "GetPageList", param);
+            IResponse<IPagedList<admin_system>> response = CallLogic<IPagedParam<admin_system>, IPagedList<admin_system>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminSystemManage", "GetPageList", param);
             if (response.Succeeded)
             {
                 g_AdminSystems = response.Result;
@@ -123,7 +123,7 @@ namespace com.admincenter.www.SystemSetup
             adminSystemExt.UpdateBy = AdminUser.AdminName;
             adminSystemExt.UpdateOn = DateTime.UtcNow;
 
-            IResponse<BoolResult> response = CallLogic<AdminSystemExt, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminSystemManage", "Deleted", adminSystemExt);
+            IResponse<BoolResult> response = CallLogic<AdminSystemExt, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminSystemManage", "Deleted", adminSystemExt);
             if (response.Succeeded)
             {
                 if (response.Result.Succeeded)

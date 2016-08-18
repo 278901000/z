@@ -8,7 +8,7 @@ using z.Foundation.Data;
 
 namespace z.AdminCenter.Entity
 {
-	[Serializable, CustomData(ConnectionName = "InvoicingDB"), Table("admin_group")]
+	[Serializable, CustomData(ConnectionName = "AdminCenterDB"), Table("admin_group")]
 	public partial class admin_group : EntityBase
     {
 		/// <summary>

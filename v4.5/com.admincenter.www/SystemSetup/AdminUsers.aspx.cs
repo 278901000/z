@@ -69,7 +69,7 @@ namespace com.admincenter.www.SystemSetup
             param.PageIndex = intPage;
             param.PageSize = intPageSize;
 
-            IResponse<IPagedList<admin_user>> response = CallLogic<IPagedParam<admin_user>, IPagedList<admin_user>>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminUserManage", "GetPageList", param);
+            IResponse<IPagedList<admin_user>> response = CallLogic<IPagedParam<admin_user>, IPagedList<admin_user>>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminUserManage", "GetPageList", param);
             if (response.Succeeded)
             {
                 g_AdminUsers = response.Result;
@@ -127,7 +127,7 @@ namespace com.admincenter.www.SystemSetup
             adminSystemExt.UpdateBy = AdminUser.AdminName;
             adminSystemExt.UpdateOn = DateTime.UtcNow;
 
-            IResponse<BoolResult> response = CallLogic<AdminUserExt, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminUserManage", "Deleted", adminSystemExt);
+            IResponse<BoolResult> response = CallLogic<AdminUserExt, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminUserManage", "Deleted", adminSystemExt);
             if (response.Succeeded)
             {
                 if (response.Result.Succeeded)
@@ -224,7 +224,7 @@ namespace com.admincenter.www.SystemSetup
             adminUserExt.UpdateBy = AdminUser.AdminName;
             adminUserExt.UpdateOn = DateTime.UtcNow;
 
-            IResponse<BoolResult> response = CallLogic<AdminUserExt, BoolResult>("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminUserManage", "Disabled", adminUserExt);
+            IResponse<BoolResult> response = CallLogic<AdminUserExt, BoolResult>("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminUserManage", "Disabled", adminUserExt);
             if (response.Succeeded)
             {
                 if (response.Result.Succeeded)

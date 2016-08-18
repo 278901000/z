@@ -38,7 +38,7 @@ namespace com.admincenter.www
 
         void UpdateAllUserSessionData()
         {
-            IResponse response = new WebFormBase().CallLogic("Logic.AdminCenter.dll", "Logic.AdminCenter.AdminAccountManage", "UpdateAllUserSession", null);
+            IResponse response = new WebFormBase().CallLogic("z.AdminCenter.Logic.dll", "z.AdminCenter.Logic.AdminAccountManage", "UpdateAllUserSession", null);
             Logger.Info(string.Format("UpdateAllUserSession_{0}_{1}", response.Succeeded, DateTime.Now.ToString()));
 
             Thread.Sleep(1000 * 60);

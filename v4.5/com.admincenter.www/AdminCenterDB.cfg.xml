@@ -2,14 +2,10 @@
 <hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
   <session-factory>
     <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
-    <property name="dialect">NHibernate.Dialect.MsSql2005Dialect</property>
-    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
-    <!--开发环境-->
-    <property name="connection.connection_string">Data Source=172.16.30.74;Initial Catalog=admin_center;User ID=admin;Password=admin4;</property>
-    <!--仿真环境-->
-    <!--<property name="connection.connection_string">Data Source=172.16.3.65,14634;Initial Catalog=HTC.Site.Test;User ID=htc.test;Password=Htc@tESt21@4#8#!;</property>-->
+    <property name="dialect">NHibernate.Dialect.MySQL5Dialect</property>
+    <property name="connection.driver_class">NHibernate.Driver.MySqlDataDriver</property>
+    <property name="connection.connection_string">Data Source=120.76.41.193;Database=papago;User ID=root;Password=papago;</property>
     <property name="show_sql">false</property>
-    <mapping assembly="Entity.AdminCenterDB"/>
+    <mapping assembly="z.AdminCenter.Entity"/>
   </session-factory>
 </hibernate-configuration>
-
