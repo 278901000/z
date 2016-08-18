@@ -122,7 +122,7 @@ namespace com.admincenter.www
                             scriptsBuilder.AppendFormat("<script src=\"{0}?code={1}&remember={2}\" async=\"async\" ></script>", callBackUrl.TrimEnd('/'), response.Result.Result.Ticket, remember);
                         }
 
-                        scriptsBuilder.AppendFormat("<script>window.location.href='{0}'</script>", strLocation);
+                        scriptsBuilder.AppendFormat("<script>setTimeout(function(){{ window.location.href='{0}' }}, {1});</script>", strLocation, Utility.GetConfigValue("JumpInterval"));
 
                         Response.Write(scriptsBuilder.ToString());
 

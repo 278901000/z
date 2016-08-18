@@ -886,3 +886,292 @@ _shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needF
    在 System.Threading.ThreadPoolWorkQueue.Dispatch()
 
 _shutdownReason=BinDirChangeOrDirectoryRename
+
+时间:2016-08-18 22:21:12,206 - INFO :Application_Start:2016/8/18 22:21:11
+
+时间:2016-08-18 22:21:12,790 - INFO :UpdateAllUserSession_True_2016/8/18 22:21:12
+
+时间:2016-08-18 22:22:12,790 - INFO :UpdateAllUserSession_True_2016/8/18 22:22:12
+
+时间:2016-08-18 22:23:12,791 - INFO :UpdateAllUserSession_True_2016/8/18 22:23:12
+
+时间:2016-08-18 22:24:12,792 - INFO :UpdateAllUserSession_True_2016/8/18 22:24:12
+
+时间:2016-08-18 22:25:12,793 - INFO :UpdateAllUserSession_True_2016/8/18 22:25:12
+
+时间:2016-08-18 22:26:12,793 - INFO :UpdateAllUserSession_True_2016/8/18 22:26:12
+
+时间:2016-08-18 22:27:12,793 - INFO :UpdateAllUserSession_True_2016/8/18 22:27:12
+
+时间:2016-08-18 22:28:12,794 - INFO :UpdateAllUserSession_True_2016/8/18 22:28:12
+
+时间:2016-08-18 22:29:12,794 - INFO :UpdateAllUserSession_True_2016/8/18 22:29:12
+
+时间:2016-08-18 22:30:12,797 - INFO :UpdateAllUserSession_True_2016/8/18 22:30:12
+
+时间:2016-08-18 22:31:12,797 - INFO :UpdateAllUserSession_True_2016/8/18 22:31:12
+
+时间:2016-08-18 22:32:12,798 - INFO :UpdateAllUserSession_True_2016/8/18 22:32:12
+
+时间:2016-08-18 22:33:12,798 - INFO :UpdateAllUserSession_True_2016/8/18 22:33:12
+
+时间:2016-08-18 22:34:12,798 - INFO :UpdateAllUserSession_True_2016/8/18 22:34:12
+
+时间:2016-08-18 22:35:12,799 - INFO :UpdateAllUserSession_True_2016/8/18 22:35:12
+
+时间:2016-08-18 22:36:12,799 - INFO :UpdateAllUserSession_True_2016/8/18 22:36:12
+
+时间:2016-08-18 22:37:12,800 - INFO :UpdateAllUserSession_True_2016/8/18 22:37:12
+
+时间:2016-08-18 22:38:12,800 - INFO :UpdateAllUserSession_True_2016/8/18 22:38:12
+
+时间:2016-08-18 22:39:12,801 - INFO :UpdateAllUserSession_True_2016/8/18 22:39:12
+
+时间:2016-08-18 22:40:12,801 - INFO :UpdateAllUserSession_True_2016/8/18 22:40:12
+
+时间:2016-08-18 22:41:12,801 - INFO :UpdateAllUserSession_True_2016/8/18 22:41:12
+
+时间:2016-08-18 22:42:12,802 - INFO :UpdateAllUserSession_True_2016/8/18 22:42:12
+
+时间:2016-08-18 22:43:12,802 - INFO :UpdateAllUserSession_True_2016/8/18 22:43:12
+
+时间:2016-08-18 22:43:24,411 - INFO :Application_End:2016/8/18 22:43:24
+
+时间:2016-08-18 22:43:24,423 - INFO :
+
+_shutDownMessage=关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment initiated shutdown
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   在 System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+
+_shutdownReason=BinDirChangeOrDirectoryRename
+
+时间:2016-08-18 22:43:34,420 - INFO :Application_Start:2016/8/18 22:43:34
+
+时间:2016-08-18 22:43:34,470 - INFO :UpdateAllUserSession_True_2016/8/18 22:43:34
+
+时间:2016-08-18 22:44:34,470 - INFO :UpdateAllUserSession_True_2016/8/18 22:44:34
+
+时间:2016-08-18 22:45:28,855 - INFO :Application_End:2016/8/18 22:45:28
+
+时间:2016-08-18 22:45:28,856 - INFO :
+
+_shutDownMessage=关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment initiated shutdown
+HostingEnvironment 导致关闭
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   在 System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+
+_shutdownReason=BinDirChangeOrDirectoryRename
+
+时间:2016-08-18 22:45:30,053 - INFO :Application_Start:2016/8/18 22:45:29
+
+时间:2016-08-18 22:45:30,110 - INFO :UpdateAllUserSession_True_2016/8/18 22:45:30
+
+时间:2016-08-18 22:46:30,111 - INFO :UpdateAllUserSession_True_2016/8/18 22:46:30
+
+时间:2016-08-18 22:46:35,295 - INFO :Application_End:2016/8/18 22:46:35
+
+时间:2016-08-18 22:46:35,296 - INFO :
+
+_shutDownMessage=关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment initiated shutdown
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   在 System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+
+_shutdownReason=BinDirChangeOrDirectoryRename
+
+时间:2016-08-18 22:46:36,593 - INFO :Application_Start:2016/8/18 22:46:36
+
+时间:2016-08-18 22:46:36,649 - INFO :UpdateAllUserSession_True_2016/8/18 22:46:36
+
+时间:2016-08-18 22:47:36,654 - INFO :UpdateAllUserSession_True_2016/8/18 22:47:36
+
+时间:2016-08-18 22:48:36,655 - INFO :UpdateAllUserSession_True_2016/8/18 22:48:36
+
+时间:2016-08-18 22:49:36,657 - INFO :UpdateAllUserSession_True_2016/8/18 22:49:36
+
+时间:2016-08-18 22:50:36,658 - INFO :UpdateAllUserSession_True_2016/8/18 22:50:36
+
+时间:2016-08-18 22:51:36,659 - INFO :UpdateAllUserSession_True_2016/8/18 22:51:36
+
+时间:2016-08-18 22:52:36,660 - INFO :UpdateAllUserSession_True_2016/8/18 22:52:36
+
+时间:2016-08-18 22:53:05,189 - INFO :Application_End:2016/8/18 22:53:05
+
+时间:2016-08-18 22:53:05,192 - INFO :
+
+_shutDownMessage=IIS configuration change
+HostingEnvironment initiated shutdown
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.Hosting.PipelineRuntime.StopProcessing()
+
+_shutdownReason=ConfigurationChange
+
+时间:2016-08-18 22:55:28,063 - INFO :Application_Start:2016/8/18 22:55:27
+
+时间:2016-08-18 22:55:28,116 - INFO :UpdateAllUserSession_True_2016/8/18 22:55:28
+
+时间:2016-08-18 22:56:16,652 - INFO :Application_End:2016/8/18 22:56:16
+
+时间:2016-08-18 22:56:16,653 - INFO :
+
+_shutDownMessage=Change in App_Offline.htm
+HostingEnvironment initiated shutdown
+Change in App_Offline.htm
+Change in App_Offline.htm
+Change in App_Offline.htm
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnAppOfflineFileChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+
+_shutdownReason=ConfigurationChange
