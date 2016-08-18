@@ -1,8 +1,8 @@
 ﻿using AdminCenter.WebForm.Driver;
-using Entity.AdminCenterDB;
-using Foundation.Data;
-using Foundation.LogicInvoke;
-using Logic.AdminCenter;
+using z.AdminCenter.Entity;
+using z.Foundation.Data;
+using z.Foundation.LogicInvoke;
+using z.AdminCenter.Logic;
 using System;
 using System.Collections.Generic;
 

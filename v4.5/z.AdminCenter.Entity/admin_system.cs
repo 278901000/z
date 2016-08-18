@@ -32,7 +32,7 @@ namespace z.AdminCenter.Entity
         }
 
 		/// <summary>
-		/// 添加系统对应的权限时起辅助作用（该Code值将默认作为权限Code的前缀，此值允许用户添加权限时自定义修改）
+		///
 		/// </summary>
 		[Column("Code")]
 		public virtual String Code
@@ -104,6 +104,16 @@ namespace z.AdminCenter.Entity
 		/// <summary>
 		///
 		/// </summary>
+		[Column("BrotherSystemId")]
+		public virtual Int32? BrotherSystemId
+        {
+            get;
+            set;
+        }
+
+		/// <summary>
+		///
+		/// </summary>
 		[Column("CreateBy")]
 		public virtual String CreateBy
         {
@@ -112,7 +122,7 @@ namespace z.AdminCenter.Entity
         }
 
 		/// <summary>
-		/// 必须为UTC时间
+		///
 		/// </summary>
 		[Column("CreateOn")]
 		public virtual DateTime CreateOn
@@ -132,7 +142,7 @@ namespace z.AdminCenter.Entity
         }
 
 		/// <summary>
-		/// 必须为UTC时间
+		///
 		/// </summary>
 		[Column("UpdateOn")]
 		public virtual DateTime? UpdateOn

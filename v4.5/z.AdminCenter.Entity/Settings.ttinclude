@@ -21,7 +21,7 @@ const string DatabaseName = "admin_center";
 /// <summary>
 /// MySql数据库连接字符串
 /// </summary>
-const string ConnectionString = @"Data Source=127.0.0.1;Database=admin_center;User ID=root;Password=123456;";
+const string ConnectionString = @"Data Source=120.76.41.193;Database=admin_center;User ID=root;Password=papago;";
 
 /// <summary>
 /// 需要排除的数据表名

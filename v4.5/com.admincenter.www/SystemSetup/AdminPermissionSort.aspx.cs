@@ -1,9 +1,9 @@
 ﻿using AdminCenter.WebForm.Driver;
-using Entity.AdminCenterDB;
-using Foundation;
-using Foundation.Data;
-using Foundation.LogicInvoke;
-using Logic.AdminCenter;
+using z.AdminCenter.Entity;
+using z.Foundation;
+using z.Foundation.Data;
+using z.Foundation.LogicInvoke;
+using z.AdminCenter.Logic;
 using System;
 
 namespace com.admincenter.www.SystemSetup

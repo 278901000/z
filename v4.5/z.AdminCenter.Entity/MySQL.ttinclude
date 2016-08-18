@@ -1,4 +1,4 @@
-﻿<#@ assembly name="$(SolutionDir)\packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll" #>
+﻿<#@ assembly name="$(SolutionDir)\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll" #>
 <#@ import namespace="MySql.Data.MySqlClient" #>
 <#+
 const string FKSql = @"

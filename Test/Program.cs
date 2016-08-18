@@ -15,11 +15,20 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            sbyte[] numbers = { SByte.MinValue, -1, 0, 10, 100, SByte.MaxValue };
+            bool result;
 
-            string strKeyword = GetKeyWordsSplitBySpace("荷兰牛栏奶粉1+段800kg", new PanGuTokenizer());
+            foreach (sbyte number in numbers)
+            {
+                result = Convert.ToBoolean(number);
+                Console.WriteLine("{0,-5}  -->  {1}", number, result);
+            }
 
-            
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+
+            //string strKeyword = GetKeyWordsSplitBySpace("荷兰牛栏奶粉1+段800kg", new PanGuTokenizer());
+
+
             Console.Read();
         }
 

@@ -60,8 +60,6 @@
   <ItemGroup>
     <Content Include="AdminCenterDB.cfg.xml" />
     <Content Include="API.aspx" />
-    <Content Include="Authentication\GuestOperate.aspx" />
-    <Content Include="Authentication\Guests.aspx" />
     <Content Include="Resource\img\blog\Thumbs.db" />
     <Content Include="Resource\img\bridge.jpg" />
     <Content Include="Resource\img\bridge1.jpg" />
@@ -2389,57 +2387,52 @@
   <ItemGroup>
     <Compile Include="API.aspx.cs">
       <DependentUpon>API.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="API.aspx.designer.cs">
       <DependentUpon>API.aspx</DependentUpon>
     </Compile>
     <Compile Include="AuthAPI.aspx.cs">
       <DependentUpon>AuthAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AuthAPI.aspx.designer.cs">
       <DependentUpon>AuthAPI.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Authentication\GuestOperate.aspx.cs">
-      <DependentUpon>GuestOperate.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Authentication\GuestOperate.aspx.designer.cs">
-      <DependentUpon>GuestOperate.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Authentication\Guests.aspx.cs">
-      <DependentUpon>Guests.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Authentication\Guests.aspx.designer.cs">
-      <DependentUpon>Guests.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Lock.aspx.cs">
       <DependentUpon>Lock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Lock.aspx.designer.cs">
       <DependentUpon>Lock.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="MyProfile.aspx.cs">
       <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MyProfile.aspx.designer.cs">
       <DependentUpon>MyProfile.aspx</DependentUpon>
@@ -2447,36 +2440,47 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemSetup\AdminGroupOperate.aspx.cs">
       <DependentUpon>AdminGroupOperate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SystemSetup\AdminGroups.aspx.cs">
       <DependentUpon>AdminGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SystemSetup\AdminPermissionOperate.aspx.cs">
       <DependentUpon>AdminPermissionOperate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SystemSetup\AdminPermissions.aspx.cs">
       <DependentUpon>AdminPermissions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SystemSetup\AdminPermissionSort.aspx.cs">
       <DependentUpon>AdminPermissionSort.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SystemSetup\AdminSystemOperate.aspx.cs">
       <DependentUpon>AdminSystemOperate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SystemSetup\AdminSystems.aspx.cs">
       <DependentUpon>AdminSystems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SystemSetup\AdminUserOperate.aspx.cs">
       <DependentUpon>AdminUserOperate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SystemSetup\AdminUsers.aspx.cs">
       <DependentUpon>AdminUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SystemSetup\OnlineAdminUsers.aspx.cs">
       <DependentUpon>OnlineAdminUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UnLock.aspx.cs">
       <DependentUpon>UnLock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UnLock.aspx.designer.cs">
       <DependentUpon>UnLock.aspx</DependentUpon>
@@ -2489,29 +2493,29 @@
     <Folder Include="Resource\plugins\plupload\jquery.ui.plupload\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Foundation\Foundation.Data\Foundation.Data.csproj">
-      <Project>{fb1bcfbb-cf57-4b8c-a74c-5460e3610c6a}</Project>
-      <Name>Foundation.Data</Name>
+    <ProjectReference Include="..\z.AdminCenter.Entity\z.AdminCenter.Entity.csproj">
+      <Project>{5eb1258e-138b-452c-9fe9-f6c184c6957c}</Project>
+      <Name>z.AdminCenter.Entity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Foundation\Foundation.LogicInvoke\Foundation.LogicInvoke.csproj">
-      <Project>{208b6fd1-608c-41e7-9e63-682f400d6c84}</Project>
-      <Name>Foundation.LogicInvoke</Name>
+    <ProjectReference Include="..\z.AdminCenter.Logic\z.AdminCenter.Logic.csproj">
+      <Project>{dca912e4-6337-4190-aaf6-6f47a79c60a0}</Project>
+      <Name>z.AdminCenter.Logic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Foundation\Foundation\Foundation.csproj">
-      <Project>{da927c7c-4f53-4b14-b760-6f882c74cd0d}</Project>
-      <Name>Foundation</Name>
+    <ProjectReference Include="..\z.AdminCenter.WebForm.Driver\z.AdminCenter.WebForm.Driver.csproj">
+      <Project>{d327771e-be5b-4f13-8bba-e0c112c12e6e}</Project>
+      <Name>z.AdminCenter.WebForm.Driver</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Entity\Entity.AdminCenterDB\Entity.AdminCenterDB.csproj">
-      <Project>{9604b7e6-66d9-4dfa-8d05-31d4dbf4aa3d}</Project>
-      <Name>Entity.AdminCenterDB</Name>
+    <ProjectReference Include="..\z.Foundation.Data\z.Foundation.Data.csproj">
+      <Project>{37e03fa3-0531-4a3a-9eaf-a0469b20f9f1}</Project>
+      <Name>z.Foundation.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Logic\AdminCenter.WebForm.Driver\AdminCenter.WebForm.Driver.csproj">
-      <Project>{a8f91834-06b4-468c-825d-06249ce20047}</Project>
-      <Name>AdminCenter.WebForm.Driver</Name>
+    <ProjectReference Include="..\z.Foundation.LogicInvoke\z.Foundation.LogicInvoke.csproj">
+      <Project>{867c810e-1cdc-4663-b7e3-a6c6d951852d}</Project>
+      <Name>z.Foundation.LogicInvoke</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Logic\Logic.AdminCenter\Logic.AdminCenter.csproj">
-      <Project>{f011c770-d774-4368-907f-89b3662a88d3}</Project>
-      <Name>Logic.AdminCenter</Name>
+    <ProjectReference Include="..\z.Foundation\z.Foundation.csproj">
+      <Project>{866936fe-f516-4394-8a19-a11757e1e2b2}</Project>
+      <Name>z.Foundation</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -92,7 +92,7 @@ namespace z.AdminCenter.Entity
         }
 
 		/// <summary>
-		/// 必须为UTC时间
+		///
 		/// </summary>
 		[Column("CreateOn")]
 		public virtual DateTime CreateOn
@@ -112,7 +112,7 @@ namespace z.AdminCenter.Entity
         }
 
 		/// <summary>
-		/// 必须为UTC时间
+		///
 		/// </summary>
 		[Column("UpdateOn")]
 		public virtual DateTime? UpdateOn

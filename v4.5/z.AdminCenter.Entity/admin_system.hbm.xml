@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping default-cascade="none" xmlns="urn:nhibernate-mapping-2.2">
 	<class name="z.AdminCenter.Entity.admin_system, z.AdminCenter.Entity" table="admin_system" dynamic-update="true">
-		<id name="AdminSystemId" type="System.Int32" column="AdminSystemId" unsaved-value="0">
-			<generator class="native" />
+		<id name="AdminSystemId" type="System.Int32" column="AdminSystemId" unsaved-value="none">
+			<generator class="assigned" />
 		</id>
 		<property name="SysKey" type="System.String" column="SysKey" not-null="true" />
 		<property name="Code" type="System.String" column="Code" not-null="true" />
@@ -12,6 +12,7 @@
 		<property name="CallBackUrl" type="System.String" column="CallBackUrl" not-null="true" />
 		<property name="Logo" type="System.String" column="Logo" not-null="false" />
 		<property name="Deleted" type="System.Boolean" column="Deleted" not-null="true" />
+		<property name="BrotherSystemId" type="System.Int32" column="BrotherSystemId" not-null="false" />
 		<property name="CreateBy" type="System.String" column="CreateBy" not-null="true" />
 		<property name="CreateOn" type="System.DateTime" column="CreateOn" not-null="true" />
 		<property name="UpdateBy" type="System.String" column="UpdateBy" not-null="false" />
