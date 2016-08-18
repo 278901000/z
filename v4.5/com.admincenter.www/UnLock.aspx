@@ -40,7 +40,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <% string strUserLogo = "/Resource/img/user-logo.gif";
                if (!string.IsNullOrEmpty(g_AdminUserExt.Logo))
                {
-                   strUserLogo = Foundation.UploadFile.GetThumbnail(g_AdminUserExt.Logo, "s2");
+                   strUserLogo = z.Foundation.UploadFile.GetThumbnail(g_AdminUserExt.Logo, "s2");
                } 
             %>
             <img class="page-lock-img" src="<%= strUserLogo %>" alt="">

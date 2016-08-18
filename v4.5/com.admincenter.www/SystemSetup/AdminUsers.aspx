@@ -185,7 +185,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </td>
                                             <td><%= item.AdminName %></td>
                                             <td><%= item.RealName %></td>
-                                            <td><%= string.IsNullOrEmpty(item.Logo) ? "" : "<img src=\"" + Foundation.UploadFile.GetThumbnail(item.Logo, "s1") + "\" />" %></td>
+                                            <td><%= string.IsNullOrEmpty(item.Logo) ? "" : "<img src=\"" + z.Foundation.UploadFile.GetThumbnail(item.Logo, "s1") + "\" />" %></td>
                                             <td>
                                                 <input name="chkDisabled" type="checkbox" class="make-switch" <%= item.Disabled ? "checked" : "" %> data-text-label="禁用" data-on="primary" data-off="info">
                                             </td>

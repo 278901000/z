@@ -156,7 +156,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 %>
                                                 <div style="width: 200px; height: 200px; position: relative">
                                                     <a href="javascript:;" style="position: absolute; top: 5px; right: 5px;" class="close" onclick="DeleteImg($(this))">×</a>
-                                                    <img style="border: 1px solid #e5e5e5;" src="<%= Foundation.UploadFile.GetThumbnail(g_strLogo, "s2") %>" />
+                                                    <img style="border: 1px solid #e5e5e5;" src="<%= z.Foundation.UploadFile.GetThumbnail(g_strLogo, "s2") %>" />
                                                 </div>
                                                 <%
                                                     } %>
