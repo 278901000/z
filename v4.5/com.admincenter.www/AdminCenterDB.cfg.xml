@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+  <session-factory>
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name="dialect">NHibernate.Dialect.MsSql2005Dialect</property>
+    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+    <!--开发环境-->
+    <property name="connection.connection_string">Data Source=172.16.30.74;Initial Catalog=admin_center;User ID=admin;Password=admin4;</property>
+    <!--仿真环境-->
+    <!--<property name="connection.connection_string">Data Source=172.16.3.65,14634;Initial Catalog=HTC.Site.Test;User ID=htc.test;Password=Htc@tESt21@4#8#!;</property>-->
+    <property name="show_sql">false</property>
+    <mapping assembly="Entity.AdminCenterDB"/>
+  </session-factory>
+</hibernate-configuration>
+
