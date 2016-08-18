@@ -848,3 +848,41 @@ _shutdownReason=ConfigurationChange
 时间:2016-08-18 16:16:37,591 - INFO :UpdateAllUserSession_True_2016/8/18 16:16:37
 
 时间:2016-08-18 16:17:37,591 - INFO :UpdateAllUserSession_True_2016/8/18 16:17:37
+
+时间:2016-08-18 16:18:37,591 - INFO :UpdateAllUserSession_True_2016/8/18 16:18:37
+
+时间:2016-08-18 16:19:37,592 - INFO :UpdateAllUserSession_True_2016/8/18 16:19:37
+
+时间:2016-08-18 16:20:37,592 - INFO :UpdateAllUserSession_True_2016/8/18 16:20:37
+
+时间:2016-08-18 16:21:37,593 - INFO :UpdateAllUserSession_True_2016/8/18 16:21:37
+
+时间:2016-08-18 16:22:37,593 - INFO :UpdateAllUserSession_True_2016/8/18 16:22:37
+
+时间:2016-08-18 16:23:37,594 - INFO :UpdateAllUserSession_True_2016/8/18 16:23:37
+
+时间:2016-08-18 16:24:26,092 - INFO :Application_End:2016/8/18 16:24:26
+
+时间:2016-08-18 16:24:26,094 - INFO :
+
+_shutDownMessage=关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment initiated shutdown
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   在 System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+
+_shutdownReason=BinDirChangeOrDirectoryRename
