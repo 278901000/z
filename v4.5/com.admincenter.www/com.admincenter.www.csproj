@@ -59,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminCenterDB.cfg.xml" />
-    <Content Include="API.aspx" />
     <Content Include="Resource\img\blog\Thumbs.db" />
     <Content Include="Resource\img\bridge.jpg" />
     <Content Include="Resource\img\bridge1.jpg" />
@@ -2385,13 +2384,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API.aspx.cs">
-      <DependentUpon>API.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="API.aspx.designer.cs">
-      <DependentUpon>API.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AuthAPI.aspx.cs">
       <DependentUpon>AuthAPI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
