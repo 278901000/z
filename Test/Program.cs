@@ -17,7 +17,7 @@ namespace Test
         {
             PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
 
-            string strKeyword = GetKeyWordsSplitBySpace("荷兰牛栏奶粉1+800kg", new PanGuTokenizer());
+            string strKeyword = GetKeyWordsSplitBySpace("荷兰牛栏奶粉1+段800kg", new PanGuTokenizer());
 
             
             Console.Read();
