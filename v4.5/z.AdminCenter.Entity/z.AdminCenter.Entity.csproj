@@ -74,27 +74,27 @@
     <None Include="Settings.ttinclude" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin_group.hbm.xml">
+    <EmbeddedResource Include="admin_group.hbm.xml">
       <DependentUpon>Mapping.tt</DependentUpon>
-    </Content>
-    <Content Include="admin_group_permission.hbm.xml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_group_permission.hbm.xml">
       <DependentUpon>Mapping.tt</DependentUpon>
-    </Content>
-    <Content Include="admin_permission.hbm.xml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_permission.hbm.xml">
       <DependentUpon>Mapping.tt</DependentUpon>
-    </Content>
-    <Content Include="admin_system.hbm.xml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_system.hbm.xml">
       <DependentUpon>Mapping.tt</DependentUpon>
-    </Content>
-    <Content Include="admin_user.hbm.xml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_user.hbm.xml">
       <DependentUpon>Mapping.tt</DependentUpon>
-    </Content>
-    <Content Include="admin_user_group.hbm.xml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_user_group.hbm.xml">
       <DependentUpon>Mapping.tt</DependentUpon>
-    </Content>
-    <Content Include="admin_user_permission.hbm.xml">
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_user_permission.hbm.xml">
       <DependentUpon>Mapping.tt</DependentUpon>
-    </Content>
+    </EmbeddedResource>
     <Content Include="Data\mysql.sql" />
     <Content Include="Entities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

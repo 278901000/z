@@ -409,7 +409,7 @@ namespace z.AdminCenter.Logic
             //取出所有管理系统
             IList<admin_system> allAdminSystemList = new AdminSystemManage().GetAllAdminSystems();
             //取出当前用户隶属的管理员组
-            DataTable dtAdminUserGroup = MsSqlHelper.ExecuteDataTable("AdminCenterDB", string.Format("select admin_group.AdminGroupId, admin_group.Type from admin_user_group inner join admin_group on admin_user_group.GroupId = admin_group.AdminGroupId where UserId = {0}", adminUserId), CommandType.Text, null);
+            DataTable dtAdminUserGroup = MySqlHelper.ExecuteDataTable("AdminCenterDB", string.Format("select admin_group.AdminGroupId, admin_group.Type from admin_user_group inner join admin_group on admin_user_group.GroupId = admin_group.AdminGroupId where UserId = {0}", adminUserId), CommandType.Text, null);
 
             //并判断是否属于超级管理员组
             bool bSuperUserGroup = dtAdminUserGroup.AsEnumerable().Where(e => e.Field<int>("Type") == 0).Count() > 0 ? true : false;
@@ -424,7 +424,7 @@ namespace z.AdminCenter.Logic
                 #region 获取数据
 
                 //获取所有有效的权限数据
-                DataTable dtAdminPermission = MsSqlHelper.ExecuteDataTable("AdminCenterDB", "SELECT * FROM admin_permission WHERE Disabled = 0 AND Deleted = 0 ORDER BY SortNO, AdminPermissionId", CommandType.Text, null);
+                DataTable dtAdminPermission = MySqlHelper.ExecuteDataTable("AdminCenterDB", "SELECT * FROM admin_permission WHERE Disabled = 0 AND Deleted = 0 ORDER BY SortNO, AdminPermissionId", CommandType.Text, null);
 
                 //取出所有有效的权限代码
                 List<string> permissionCodes = (from dr in dtAdminPermission.AsEnumerable()
@@ -435,7 +435,7 @@ namespace z.AdminCenter.Logic
                 foreach (var obj in allAdminSystemList)
                 {
                     List<DataRow> dataRows = (from dr in dtAdminPermission.AsEnumerable()
-                                              where dr.Field<int>("SystemId") == obj.AdminSystemId && dr.Field<bool>("IsMenu")
+                                              where dr.Field<int>("SystemId") == obj.AdminSystemId && Convert.ToBoolean(dr.Field<UInt64>("IsMenu"))
                                               select dr).ToList();
                     menuTrees.Add(obj.Code, (new AdminPermissionManage()).GetAdminPermissionTree(dataRows, -1));
                 }
@@ -460,10 +460,10 @@ namespace z.AdminCenter.Logic
                 //获取当前用户隶属的管理员组包含的权限
                 List<int> adminGroupIds = dtAdminUserGroup.AsEnumerable().Select(e => e.Field<int>("AdminGroupId")).ToList();
                 string strGroupIds = string.Join(",", adminGroupIds.Select(e => e.ToString()).ToArray());
-                DataTable dtAdminGroupPermission = string.IsNullOrEmpty(strGroupIds) ? (new DataTable()) : MsSqlHelper.ExecuteDataTable("AdminCenterDB", string.Format("select * from admin_group_permission where GroupId in ({0})", strGroupIds), CommandType.Text, null);
+                DataTable dtAdminGroupPermission = string.IsNullOrEmpty(strGroupIds) ? (new DataTable()) : MySqlHelper.ExecuteDataTable("AdminCenterDB", string.Format("select * from admin_group_permission where GroupId in ({0})", strGroupIds), CommandType.Text, null);
 
                 //获取当前用户直接包含的权限
-                DataTable dtAdminUserPermission = MsSqlHelper.ExecuteDataTable("AdminCenterDB", string.Format("select * from admin_user_permission where UserId = {0}", adminUserId), CommandType.Text, null);
+                DataTable dtAdminUserPermission = MySqlHelper.ExecuteDataTable("AdminCenterDB", string.Format("select * from admin_user_permission where UserId = {0}", adminUserId), CommandType.Text, null);
 
                 //合并所有权限ID并去重
                 List<int> permissionIds = dtAdminGroupPermission.AsEnumerable().Select(e => e.Field<int>("PermissionId")).ToList();
@@ -472,7 +472,7 @@ namespace z.AdminCenter.Logic
 
                 //获取当前用户拥有的所有权限
                 string strPermissionIds = string.Join(",", permissionIds.Select(e => e.ToString()).ToArray());
-                DataTable dtAdminPermission = string.IsNullOrEmpty(strPermissionIds) ? (new DataTable()) : MsSqlHelper.ExecuteDataTable("AdminCenterDB", string.Format("SELECT * FROM admin_permission WHERE AdminPermissionId IN ({0}) AND Disabled = 0 AND Deleted = 0 ORDER BY SortNo, AdminPermissionId", strPermissionIds), CommandType.Text, null);
+                DataTable dtAdminPermission = string.IsNullOrEmpty(strPermissionIds) ? (new DataTable()) : MySqlHelper.ExecuteDataTable("AdminCenterDB", string.Format("SELECT * FROM admin_permission WHERE AdminPermissionId IN ({0}) AND Disabled = 0 AND Deleted = 0 ORDER BY SortNo, AdminPermissionId", strPermissionIds), CommandType.Text, null);
 
                 //获取拥有权限的系统
                 List<int> adminSystemIds = dtAdminPermission.AsEnumerable().Select(e => e.Field<int>("SystemId")).Distinct().ToList();
@@ -487,7 +487,7 @@ namespace z.AdminCenter.Logic
                 foreach (var obj in ownAdminSystems)
                 {
                     List<DataRow> dataRows = (from dr in dtAdminPermission.AsEnumerable()
-                                              where dr.Field<int>("SystemId") == obj.AdminSystemId && dr.Field<bool>("IsMenu")
+                                              where dr.Field<int>("SystemId") == obj.AdminSystemId && Convert.ToBoolean(dr.Field<UInt64>("IsMenu"))
                                               select dr).ToList();
                     menuTrees.Add(obj.Code, (new AdminPermissionManage()).GetAdminPermissionTree(dataRows, -1));
                 }

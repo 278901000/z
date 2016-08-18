@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminUsers.aspx.cs" Inherits="com.admincenter.www.SystemSetup.AdminUsers" %>
 
-<%@ Import Namespace="Entity.AdminCenterDB" %>
+<%@ Import Namespace="z.AdminCenter.Entity" %>
 
 <!DOCTYPE html>
 <!-- 

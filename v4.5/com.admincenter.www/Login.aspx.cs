@@ -5,6 +5,9 @@ using z.Foundation.LogicInvoke;
 using z.AdminCenter.Logic;
 using System;
 using System.Text;
+using System.Collections.Generic;
+using z.AdminCenter.Entity;
+using System.Linq;
 
 namespace com.admincenter.www
 {
@@ -19,7 +22,7 @@ namespace com.admincenter.www
             {
                 if (!string.IsNullOrEmpty(Request.Params["errorCode"]))
                 {
-                    switch(Request.Params["errorCode"])
+                    switch (Request.Params["errorCode"])
                     {
                         case "ERROR_PARAM":
                             g_strMsg = "参数错误";
@@ -90,20 +93,35 @@ namespace com.admincenter.www
 
                         StringBuilder scriptsBuilder = new StringBuilder();
 
-                        foreach (var obj in response.Result.Result.OwnAdminSystems)
+                        string strLocation = "/";
+                        string strDomain = "";
+                        if (!string.IsNullOrEmpty(Request.Params["to"]))
                         {
-                            var listCallBackUrl = obj.CallBackUrl.Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                            foreach (var callBackUrl in listCallBackUrl)
+                            strLocation = Server.UrlDecode(Request.Params["to"]);
+
+                            if (strLocation.IsMatch(@"^http[s]?://[^/\\]+"))
                             {
-                                scriptsBuilder.AppendFormat("<script src=\"{0}?code={1}&remember={2}\" ></script>", callBackUrl.TrimEnd('/'), response.Result.Result.Ticket, remember);
+                                strDomain = strLocation.GetText(@"^http[s]?://[^/\\]+");
                             }
                         }
 
-                        string strLocation = "/";
-                        if (Request.Params["to"] != null)
+                        var CallBackUrlList = response.Result.Result.OwnAdminSystems.SelectMany(l => l.CallBackUrl.Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)).ToList();
+                        if (!string.IsNullOrEmpty(strDomain))
                         {
-                            strLocation = Server.UrlDecode(Request.Params["to"]);
+                            var iIndex = CallBackUrlList.FindIndex(l => l.IndexOf(strDomain) > -1);
+                            if (iIndex > -1)
+                            {
+                                scriptsBuilder.AppendFormat("<script src=\"{0}?code={1}&remember={2}\"></script>", CallBackUrlList[iIndex].TrimEnd('/'), response.Result.Result.Ticket, remember);
+
+                                CallBackUrlList.RemoveAt(iIndex);
+                            }
                         }
+
+                        foreach (var callBackUrl in CallBackUrlList)
+                        {
+                            scriptsBuilder.AppendFormat("<script src=\"{0}?code={1}&remember={2}\" async=\"async\" ></script>", callBackUrl.TrimEnd('/'), response.Result.Result.Ticket, remember);
+                        }
+
                         scriptsBuilder.AppendFormat("<script>window.location.href='{0}'</script>", strLocation);
 
                         Response.Write(scriptsBuilder.ToString());
