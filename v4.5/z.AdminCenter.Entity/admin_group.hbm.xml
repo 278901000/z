@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping default-cascade="none" xmlns="urn:nhibernate-mapping-2.2">
 	<class name="z.AdminCenter.Entity.admin_group, z.AdminCenter.Entity" table="admin_group" dynamic-update="true">
-		<id name="AdminGroupId" type="System.Int32" column="AdminGroupId" unsaved-value="none">
-			<generator class="assigned" />
+		<id name="AdminGroupId" type="System.Int32" column="AdminGroupId" unsaved-value="0">
+			<generator class="native" />
 		</id>
 		<property name="Name" type="System.String" column="Name" not-null="true" />
 		<property name="Type" type="System.Int32" column="Type" not-null="true" />
