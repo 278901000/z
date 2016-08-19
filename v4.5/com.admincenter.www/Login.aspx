@@ -61,6 +61,13 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
             </div>
             <div class="form-actions">
+                <% if (bUnionLogin)
+                    { %>
+                 <button type="submit" class="btn blue pull-right" disabled>
+                    多站点联合登录中，请稍候...
+                </button>
+                <% }
+                    else { %>
                 <label class="checkbox">
                     <input type="checkbox" name="remember" />
                     Remember me
@@ -68,6 +75,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <button type="submit" class="btn blue pull-right">
                     Login <i class="m-icon-swapright m-icon-white"></i>
                 </button>
+                <% } %>
             </div>
         </form>
         <!-- END LOGIN FORM -->

@@ -15,6 +15,7 @@ namespace com.admincenter.www
     {
         //登录消息
         protected string g_strMsg = "";
+        protected bool bUnionLogin = false;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -125,6 +126,8 @@ namespace com.admincenter.www
                         scriptsBuilder.AppendFormat("<script>setTimeout(function(){{ window.location.href='{0}' }}, {1});</script>", strLocation, Utility.GetConfigValue("JumpInterval"));
 
                         Response.Write(scriptsBuilder.ToString());
+
+                        bUnionLogin = true;
 
                         #endregion
                     }
