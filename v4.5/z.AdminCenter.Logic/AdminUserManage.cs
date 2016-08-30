@@ -104,6 +104,7 @@ namespace z.AdminCenter.Logic
                     }
 
                     transaction.Commit();
+                    result.Result = obj;
                     result.Succeeded = true;
                 }
                 catch
