@@ -98,6 +98,7 @@
     <Compile Include="MongoDBRepository.cs" />
     <Compile Include="MsSqlHelper.cs" />
     <Compile Include="MySqlHelper.cs" />
+    <Compile Include="NHibernateEntityInit.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="NHibernateRepository.cs" />
     <Compile Include="OracleHelper.cs" />

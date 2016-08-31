@@ -105,19 +105,5 @@ namespace z.Foundation.Data
                 return dict[classFullName];
             }
         }
-
-        public void InitSessionFactory()
-        {
-            string strAllDB = Utility.GetConfigValue("AllDB");
-            if(!string.IsNullOrEmpty(strAllDB))
-            {
-                var dbs = strAllDB.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                foreach (var item in dbs)
-                {
-                    var sessionFactory = (new Configuration()).Configure(string.Format("{0}/{1}.cfg.xml", Utility.ApplicationPath(), item)).BuildSessionFactory();
-                    cache.SetCache(item, sessionFactory, TimeSpan.Zero);
-                }
-            }
-        }
     }
 }

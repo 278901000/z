@@ -1968,3 +1968,38 @@ _shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needF
    在 System.Threading.ThreadPoolWorkQueue.Dispatch()
 
 _shutdownReason=BinDirChangeOrDirectoryRename
+
+时间:2016-08-31 19:37:56,308 - INFO :Application_Start:2016/8/31 19:37:55
+
+时间:2016-08-31 19:37:59,515 - INFO :UpdateAllUserSession_True_2016/8/31 19:37:59
+
+时间:2016-08-31 19:38:59,521 - INFO :UpdateAllUserSession_True_2016/8/31 19:38:59
+
+时间:2016-08-31 19:39:59,521 - INFO :UpdateAllUserSession_True_2016/8/31 19:39:59
+
+时间:2016-08-31 19:40:59,522 - INFO :UpdateAllUserSession_True_2016/8/31 19:40:59
+
+时间:2016-08-31 19:41:59,522 - INFO :UpdateAllUserSession_True_2016/8/31 19:41:59
+
+时间:2016-08-31 19:42:59,523 - INFO :UpdateAllUserSession_True_2016/8/31 19:42:59
+
+时间:2016-08-31 19:43:59,523 - INFO :UpdateAllUserSession_True_2016/8/31 19:43:59
+
+时间:2016-08-31 19:44:59,524 - INFO :UpdateAllUserSession_True_2016/8/31 19:44:59
+
+时间:2016-08-31 19:45:59,524 - INFO :UpdateAllUserSession_True_2016/8/31 19:45:59
+
+时间:2016-08-31 19:46:52,396 - INFO :Application_End:2016/8/31 19:46:52
+
+时间:2016-08-31 19:46:52,398 - INFO :
+
+_shutDownMessage=HostingEnvironment initiated shutdown
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.Hosting.PipelineRuntime.StopProcessing()
+
+_shutdownReason=HostingEnvironment
