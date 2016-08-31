@@ -48,6 +48,9 @@
       <HintPath>..\packages\Enyim.Caching.Web.1.0.0.1\lib\net40\Enyim.Caching.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="hk.papago.Entity.PaPaGoDB">
+      <HintPath>..\..\papago\PaPaGo\Entity\hk.papago.Entity.PaPaGoDB\bin\Debug\hk.papago.Entity.PaPaGoDB.dll</HintPath>
+    </Reference>
     <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
       <Private>True</Private>
@@ -123,6 +126,22 @@
       <Project>{5d4ad9be-1ffb-41ab-9943-25737971bf57}</Project>
       <Name>z.Lucene.Net</Name>
     </ProjectReference>
+    <ProjectReference Include="..\v4.5\z.AdminCenter.Entity\z.AdminCenter.Entity.csproj">
+      <Project>{5eb1258e-138b-452c-9fe9-f6c184c6957c}</Project>
+      <Name>z.AdminCenter.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\v4.5\z.Foundation.Data\z.Foundation.Data.csproj">
+      <Project>{37e03fa3-0531-4a3a-9eaf-a0469b20f9f1}</Project>
+      <Name>z.Foundation.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminCenterDB.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PaPaGoDB.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
