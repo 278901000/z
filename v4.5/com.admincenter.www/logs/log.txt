@@ -1652,3 +1652,319 @@ _shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needF
    在 System.Web.Hosting.PipelineRuntime.StopProcessing()
 
 _shutdownReason=HostingEnvironment
+
+时间:2016-08-31 16:02:03,427 - INFO :Application_Start:2016/8/31 16:02:02
+
+时间:2016-08-31 16:02:03,760 - INFO :UpdateAllUserSession_True_2016/8/31 16:02:03
+
+时间:2016-08-31 16:03:03,761 - INFO :UpdateAllUserSession_True_2016/8/31 16:03:03
+
+时间:2016-08-31 16:04:03,767 - INFO :UpdateAllUserSession_True_2016/8/31 16:04:03
+
+时间:2016-08-31 16:05:03,769 - INFO :UpdateAllUserSession_True_2016/8/31 16:05:03
+
+时间:2016-08-31 16:06:03,769 - INFO :UpdateAllUserSession_True_2016/8/31 16:06:03
+
+时间:2016-08-31 16:07:03,789 - INFO :UpdateAllUserSession_True_2016/8/31 16:07:03
+
+时间:2016-08-31 16:08:03,789 - INFO :UpdateAllUserSession_True_2016/8/31 16:08:03
+
+时间:2016-08-31 16:09:03,790 - INFO :UpdateAllUserSession_True_2016/8/31 16:09:03
+
+时间:2016-08-31 16:10:03,790 - INFO :UpdateAllUserSession_True_2016/8/31 16:10:03
+
+时间:2016-08-31 16:11:03,790 - INFO :UpdateAllUserSession_True_2016/8/31 16:11:03
+
+时间:2016-08-31 16:12:03,791 - INFO :UpdateAllUserSession_True_2016/8/31 16:12:03
+
+时间:2016-08-31 16:12:20,916 - INFO :Application_End:2016/8/31 16:12:20
+
+时间:2016-08-31 16:12:20,920 - INFO :
+
+_shutDownMessage=HostingEnvironment initiated shutdown
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.Hosting.PipelineRuntime.StopProcessing()
+
+_shutdownReason=HostingEnvironment
+
+时间:2016-08-31 16:12:30,285 - INFO :Application_Start:2016/8/31 16:12:30
+
+时间:2016-08-31 16:12:30,596 - INFO :UpdateAllUserSession_True_2016/8/31 16:12:30
+
+时间:2016-08-31 16:13:38,961 - INFO :UpdateAllUserSession_True_2016/8/31 16:13:38
+
+时间:2016-08-31 16:14:38,962 - INFO :UpdateAllUserSession_True_2016/8/31 16:14:38
+
+时间:2016-08-31 16:15:38,962 - INFO :UpdateAllUserSession_True_2016/8/31 16:15:38
+
+时间:2016-08-31 16:16:38,963 - INFO :UpdateAllUserSession_True_2016/8/31 16:16:38
+
+时间:2016-08-31 16:17:38,963 - INFO :UpdateAllUserSession_True_2016/8/31 16:17:38
+
+时间:2016-08-31 16:18:38,964 - INFO :UpdateAllUserSession_True_2016/8/31 16:18:38
+
+时间:2016-08-31 16:19:38,964 - INFO :UpdateAllUserSession_True_2016/8/31 16:19:38
+
+时间:2016-08-31 16:20:38,964 - INFO :UpdateAllUserSession_True_2016/8/31 16:20:38
+
+时间:2016-08-31 16:21:38,965 - INFO :UpdateAllUserSession_True_2016/8/31 16:21:38
+
+时间:2016-08-31 16:22:37,521 - INFO :Application_End:2016/8/31 16:22:37
+
+时间:2016-08-31 16:22:37,526 - INFO :
+
+_shutDownMessage=关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment initiated shutdown
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment 导致关闭
+关键目录的更改通知。
+bin dir change or directory rename
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   在 System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+
+_shutdownReason=BinDirChangeOrDirectoryRename
+
+时间:2016-08-31 16:22:48,003 - INFO :Application_Start:2016/8/31 16:22:47
+
+时间:2016-08-31 16:22:48,091 - INFO :UpdateAllUserSession_True_2016/8/31 16:22:48
+
+时间:2016-08-31 16:23:48,094 - INFO :UpdateAllUserSession_True_2016/8/31 16:23:48
+
+时间:2016-08-31 16:24:48,101 - INFO :UpdateAllUserSession_True_2016/8/31 16:24:48
+
+时间:2016-08-31 16:25:48,101 - INFO :UpdateAllUserSession_True_2016/8/31 16:25:48
+
+时间:2016-08-31 16:26:48,101 - INFO :UpdateAllUserSession_True_2016/8/31 16:26:48
+
+时间:2016-08-31 16:27:48,117 - INFO :UpdateAllUserSession_True_2016/8/31 16:27:48
+
+时间:2016-08-31 16:28:48,140 - INFO :UpdateAllUserSession_True_2016/8/31 16:28:48
+
+时间:2016-08-31 16:29:48,142 - INFO :UpdateAllUserSession_True_2016/8/31 16:29:48
+
+时间:2016-08-31 16:30:48,142 - INFO :UpdateAllUserSession_True_2016/8/31 16:30:48
+
+时间:2016-08-31 16:31:48,143 - INFO :UpdateAllUserSession_True_2016/8/31 16:31:48
+
+时间:2016-08-31 16:32:48,143 - INFO :UpdateAllUserSession_True_2016/8/31 16:32:48
+
+时间:2016-08-31 16:33:48,145 - INFO :UpdateAllUserSession_True_2016/8/31 16:33:48
+
+时间:2016-08-31 16:34:48,147 - INFO :UpdateAllUserSession_True_2016/8/31 16:34:48
+
+时间:2016-08-31 16:35:12,494 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:35:48,147 - INFO :UpdateAllUserSession_True_2016/8/31 16:35:48
+
+时间:2016-08-31 16:36:48,148 - INFO :UpdateAllUserSession_True_2016/8/31 16:36:48
+
+时间:2016-08-31 16:36:52,522 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:37:48,154 - INFO :UpdateAllUserSession_True_2016/8/31 16:37:48
+
+时间:2016-08-31 16:38:32,546 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:38:48,178 - INFO :UpdateAllUserSession_True_2016/8/31 16:38:48
+
+时间:2016-08-31 16:39:48,178 - INFO :UpdateAllUserSession_True_2016/8/31 16:39:48
+
+时间:2016-08-31 16:40:12,573 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:40:48,179 - INFO :UpdateAllUserSession_True_2016/8/31 16:40:48
+
+时间:2016-08-31 16:41:48,179 - INFO :UpdateAllUserSession_True_2016/8/31 16:41:48
+
+时间:2016-08-31 16:41:52,593 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:42:48,179 - INFO :UpdateAllUserSession_True_2016/8/31 16:42:48
+
+时间:2016-08-31 16:43:32,621 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:43:48,180 - INFO :UpdateAllUserSession_True_2016/8/31 16:43:48
+
+时间:2016-08-31 16:44:48,180 - INFO :UpdateAllUserSession_True_2016/8/31 16:44:48
+
+时间:2016-08-31 16:45:12,653 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:45:48,181 - INFO :UpdateAllUserSession_True_2016/8/31 16:45:48
+
+时间:2016-08-31 16:46:48,181 - INFO :UpdateAllUserSession_True_2016/8/31 16:46:48
+
+时间:2016-08-31 16:46:52,672 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:47:48,182 - INFO :UpdateAllUserSession_True_2016/8/31 16:47:48
+
+时间:2016-08-31 16:48:32,693 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:48:48,182 - INFO :UpdateAllUserSession_True_2016/8/31 16:48:48
+
+时间:2016-08-31 16:49:48,182 - INFO :UpdateAllUserSession_True_2016/8/31 16:49:48
+
+时间:2016-08-31 16:50:12,723 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:50:48,197 - INFO :UpdateAllUserSession_True_2016/8/31 16:50:48
+
+时间:2016-08-31 16:51:48,197 - INFO :UpdateAllUserSession_True_2016/8/31 16:51:48
+
+时间:2016-08-31 16:51:52,743 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:52:48,198 - INFO :UpdateAllUserSession_True_2016/8/31 16:52:48
+
+时间:2016-08-31 16:53:32,794 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:53:48,198 - INFO :UpdateAllUserSession_True_2016/8/31 16:53:48
+
+时间:2016-08-31 16:54:48,199 - INFO :UpdateAllUserSession_True_2016/8/31 16:54:48
+
+时间:2016-08-31 16:55:12,841 - ERROR:操作超时
+System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 AdminCenter.WebForm.Driver.WebFormAdminBase.ProcessRequest(HttpContext context) 位置 D:\project\z\v4.5\z.AdminCenter.WebForm.Driver\WebFormAdminBase.cs:行号 256
+
+时间:2016-08-31 16:55:48,199 - INFO :UpdateAllUserSession_True_2016/8/31 16:55:48
+
+时间:2016-08-31 16:56:48,199 - INFO :UpdateAllUserSession_True_2016/8/31 16:56:48
+
+时间:2016-08-31 16:57:48,200 - INFO :UpdateAllUserSession_True_2016/8/31 16:57:48
+
+时间:2016-08-31 16:58:48,200 - INFO :UpdateAllUserSession_True_2016/8/31 16:58:48
+
+时间:2016-08-31 16:59:48,201 - INFO :UpdateAllUserSession_True_2016/8/31 16:59:48
+
+时间:2016-08-31 17:00:48,201 - INFO :UpdateAllUserSession_True_2016/8/31 17:00:48
+
+时间:2016-08-31 17:01:48,202 - INFO :UpdateAllUserSession_True_2016/8/31 17:01:48
+
+时间:2016-08-31 17:02:48,202 - INFO :UpdateAllUserSession_True_2016/8/31 17:02:48
+
+时间:2016-08-31 17:03:48,202 - INFO :UpdateAllUserSession_True_2016/8/31 17:03:48
+
+时间:2016-08-31 17:04:48,203 - INFO :UpdateAllUserSession_True_2016/8/31 17:04:48
+
+时间:2016-08-31 17:05:48,203 - INFO :UpdateAllUserSession_True_2016/8/31 17:05:48
+
+时间:2016-08-31 17:06:48,204 - INFO :UpdateAllUserSession_True_2016/8/31 17:06:48
+
+时间:2016-08-31 17:07:48,204 - INFO :UpdateAllUserSession_True_2016/8/31 17:07:48
+
+时间:2016-08-31 17:08:48,205 - INFO :UpdateAllUserSession_True_2016/8/31 17:08:48
+
+时间:2016-08-31 17:09:48,205 - INFO :UpdateAllUserSession_True_2016/8/31 17:09:48
+
+时间:2016-08-31 17:10:48,206 - INFO :UpdateAllUserSession_True_2016/8/31 17:10:48
+
+时间:2016-08-31 17:11:37,063 - INFO :Application_End:2016/8/31 17:11:37
+
+时间:2016-08-31 17:11:37,064 - INFO :
+
+_shutDownMessage=关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment initiated shutdown
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   在 System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+
+_shutdownReason=BinDirChangeOrDirectoryRename

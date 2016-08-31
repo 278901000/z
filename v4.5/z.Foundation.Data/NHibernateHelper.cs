@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using z.Foundation.Cache;
 
 namespace z.Foundation.Data
 {
@@ -13,7 +14,10 @@ namespace z.Foundation.Data
     /// </summary>
     public class NHibernateHelper<T>
     {
-        static readonly object lockObj = new object();
+        static ICache cache = new HttpCache();
+        static readonly object lockSessionFactory = new object();
+
+        static readonly object lockConfigFileName = new object();
         static Dictionary<string, string> dict = new Dictionary<string, string>();
 
         static ISessionFactory _SessionFactory;
@@ -25,10 +29,35 @@ namespace z.Foundation.Data
         {
             get
             {
-                if (_SessionFactory == null)
+                string strCacheKey = ConfigFileName;
+                var obj = cache.GetCache(strCacheKey);
+
+                if (obj == null)
                 {
-                    _SessionFactory = (new Configuration()).Configure(string.Format("{0}/{1}.cfg.xml", Utility.ApplicationPath(), ConfigFileName)).BuildSessionFactory();
+                    lock (lockSessionFactory)
+                    {
+                        obj = cache.GetCache(strCacheKey);
+                        if (obj == null)
+                        {
+                            _SessionFactory = (new Configuration()).Configure(string.Format("{0}/{1}.cfg.xml", Utility.ApplicationPath(), ConfigFileName)).BuildSessionFactory();
+                            cache.SetCache(strCacheKey, _SessionFactory, TimeSpan.Zero);
+                        }
+                        else
+                        {
+                            _SessionFactory = (ISessionFactory)obj;
+                        }
+                    }
                 }
+                else
+                {
+                    _SessionFactory = (ISessionFactory)obj;
+                }
+
+                //if (_SessionFactory == null)
+                //{
+                //    _SessionFactory = (new Configuration()).Configure(string.Format("{0}/{1}.cfg.xml", Utility.ApplicationPath(), ConfigFileName)).BuildSessionFactory();
+                //}
+
                 return _SessionFactory;
             }
         }
@@ -52,7 +81,7 @@ namespace z.Foundation.Data
                 var classFullName = typeof(T).FullName;
                 if (!dict.ContainsKey(classFullName))
                 {
-                    lock (lockObj)
+                    lock (lockConfigFileName)
                     {
                         if (!dict.ContainsKey(classFullName))
                         {
