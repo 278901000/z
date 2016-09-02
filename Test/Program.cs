@@ -14,6 +14,7 @@ using z.AdminCenter.Entity;
 using System.Threading;
 using hk.papago.Entity.PaPaGoDB;
 using System.Diagnostics;
+using NHibernate.Context;
 
 namespace Test
 {
@@ -64,25 +65,50 @@ namespace Test
             //    Console.WriteLine(watch3.ElapsedMilliseconds + "ms");
             //}
 
-            ISession session1 = NHibernateHelper<admin_system>.OpenSession();
-            var a = session1.Query<admin_system>().ToList();
+            //ISession session1 = NHibernateHelper<admin_system>.OpenSession();
+            //var a = session1.Query<admin_system>().ToList();
 
-            ISession session5 = NHibernateHelper<admin_system>.OpenSession();
-            var e = session5.Query<admin_system>().ToList();
+            //ISession session5 = NHibernateHelper<admin_system>.OpenSession();
+            //var e = session5.Query<admin_system>().ToList();
 
-            ISession session3 = NHibernateHelper<admin_user>.OpenSession();
-            var c = session3.Query<admin_user>().ToList();
+            //ISession session3 = NHibernateHelper<admin_user>.OpenSession();
+            //var c = session3.Query<admin_user>().ToList();
 
-            ISession session2 = NHibernateHelper<supplier>.OpenSession();
-            var b = session2.Query<supplier>().ToList();
+            //ISession session2 = NHibernateHelper<supplier>.OpenSession();
+            //var b = session2.Query<supplier>().ToList();
 
-            ISession session6 = NHibernateHelper<supplier>.OpenSession();
-            var f = session6.Query<supplier>().ToList();
+            //ISession session6 = NHibernateHelper<supplier>.OpenSession();
+            //var f = session6.Query<supplier>().ToList();
 
-            ISession session4 = NHibernateHelper<brand>.OpenSession();
-            var d = session4.Query<brand>().ToList();
+            //ISession session4 = NHibernateHelper<brand>.OpenSession();
+            //var d = session4.Query<brand>().ToList();
 
 
+            for (int i = 0; i < 1000000; i++)
+            {
+                //IRepository repository = new NHibernateRepository();
+
+                //var adminSystem = repository.First<admin_system>(e => 1 == 1);
+
+                ////IQueryable<admin_system> queryable = repository.AsQueryable<admin_system>();
+                ////var result = new PagedList<admin_system>(queryable, 1, 10);
+
+                ////repository.AsQueryable<admin_system>().ToList();
+
+                //using (ISession session = NHibernateHelper<admin_group>.OpenSession())
+                //using (ITransaction transaction = session.BeginTransaction())
+                //{
+                //    adminSystem.UpdateOn = DateTime.Now;
+                //    transaction.Commit();
+                //}
+
+
+                NHibernateHelper<admin_system>.OpenSession();
+                Thread.Sleep(100);
+            }
+
+
+            Console.Write("finish");
 
             Console.Read();
         }

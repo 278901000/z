@@ -1,5 +1,6 @@
 ﻿using NHibernate;
 using NHibernate.Cfg;
+using NHibernate.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,7 @@ namespace z.Foundation.Data
                         obj = cache.GetCache(strCacheKey);
                         if (obj == null)
                         {
-                            _SessionFactory = (new Configuration()).Configure(string.Format("{0}/{1}.cfg.xml", Utility.ApplicationPath(), ConfigFileName)).BuildSessionFactory();
+                            _SessionFactory = (new Configuration()).Configure(string.Format("{0}/{1}.cfg.xml", Utility.ApplicationPath(), ConfigFileName)).CurrentSessionContext<CallSessionContext>().BuildSessionFactory();
                             cache.SetCache(strCacheKey, _SessionFactory, TimeSpan.Zero);
                         }
                         else
@@ -53,11 +54,6 @@ namespace z.Foundation.Data
                     _SessionFactory = (ISessionFactory)obj;
                 }
 
-                //if (_SessionFactory == null)
-                //{
-                //    _SessionFactory = (new Configuration()).Configure(string.Format("{0}/{1}.cfg.xml", Utility.ApplicationPath(), ConfigFileName)).BuildSessionFactory();
-                //}
-
                 return _SessionFactory;
             }
         }
@@ -68,7 +64,31 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public static ISession OpenSession()
         {
-            return SessionFactory.OpenSession();
+            ISession session;
+
+            if (CurrentSessionContext.HasBind(SessionFactory))
+            {
+                session = CurrentSessionContext.Unbind(SessionFactory);
+                if (session != null)
+                {
+                    if (session.IsOpen)
+                    {
+                        session.Flush();
+                        session.Close();
+                    }
+                    session.Dispose();
+                }
+
+                session = SessionFactory.OpenSession();
+                CurrentSessionContext.Bind(session);
+            }
+            else
+            {
+                session = SessionFactory.OpenSession();
+                CurrentSessionContext.Bind(session);
+            }
+
+            return session;
         }
 
         /// <summary>
