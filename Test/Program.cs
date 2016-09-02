@@ -83,29 +83,39 @@ namespace Test
             //ISession session4 = NHibernateHelper<brand>.OpenSession();
             //var d = session4.Query<brand>().ToList();
 
-
-            for (int i = 0; i < 1000; i++)
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            for (int i = 0; i < 100000; i++)
             {
-                IRepository repository = new NHibernateRepository();
-
-                var adminSystem = repository.First<admin_system>(e => 1 == 1);
-
-                ////IQueryable<admin_system> queryable = repository.AsQueryable<admin_system>();
-                ////var result = new PagedList<admin_system>(queryable, 1, 10);
-
-                ////repository.AsQueryable<admin_system>().ToList();
-
-                //using (ISession session = NHibernateHelper<admin_group>.OpenSession())
-                //using (ITransaction transaction = session.BeginTransaction())
-                //{
-                //    adminSystem.UpdateOn = DateTime.Now;
-                //    transaction.Commit();
-                //}
-
-
-                //NHibernateHelper<admin_system>.OpenSession();
-                //Thread.Sleep(100);
+                NHibernateHelper<admin_system>.OpenSession();
             }
+
+            stopwatch.Stop();
+
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
+
+            //IRepository repository = new NHibernateRepository();
+
+            //repository.Save<admin_system>(new admin_system()
+            //{
+            //    Name = "aaa123",
+            //    SysKey = "11223344",
+            //    Code = "adfadf",
+            //    URL = "http://adfadf",
+            //    CallBackUrl = "http://adfadf",
+            //    CreateBy = "a",
+            //    CreateOn = DateTime.UtcNow
+            //});
+
+            //var adminSystem = repository.Get<admin_system>(24);
+            //adminSystem.Name = "aaa-update";
+            //repository.Update<admin_system>(adminSystem);
+
+            //repository.Delete<admin_system>(adminSystem);
+
+
+            //repository.Delete<admin_system>(25);
+            
 
 
             Console.Write("finish");

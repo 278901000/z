@@ -22,7 +22,6 @@ namespace z.Foundation.Data
         public IQueryable<T> AsQueryable<T>() where T : class, IEntity, new()
         {
             ISession session = NHibernateHelper<T>.OpenSession();
-
             return session.Query<T>();
         }
 
@@ -34,10 +33,8 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public long Count<T>(Expression<Func<T, bool>> expression) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                return session.Query<T>().Where(expression).Count();
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            return session.Query<T>().Where(expression).Count();
         }
 
         /// <summary>
@@ -48,10 +45,8 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public bool Exists<T>(Expression<Func<T, bool>> expression) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                return session.Query<T>().Where(expression).Any();
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            return session.Query<T>().Where(expression).Any();
         }
 
         /// <summary>
@@ -62,10 +57,8 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public T First<T>(Expression<Func<T, bool>> expression) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                return session.Query<T>().Where(expression).FirstOrDefault();
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            return session.Query<T>().Where(expression).FirstOrDefault();
         }
 
         /// <summary>
@@ -77,10 +70,8 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public IList<T> Top<T>(Expression<Func<T, bool>> expression, int n) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                return session.Query<T>().Where(expression).Take(n).ToList();
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            return session.Query<T>().Where(expression).Take(n).ToList();
         }
 
         /// <summary>
@@ -93,23 +84,20 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public IList<T> Top<T>(Expression<Func<T, bool>> expression, int n, List<OrderBy<T>> sortList) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
+            ISession session = NHibernateHelper<T>.OpenSession();
+            var result = session.Query<T>().Where(expression);
+            foreach (var obj in sortList)
             {
-                var result = session.Query<T>().Where(expression);
-
-                foreach (var obj in sortList)
+                if (obj.Sort)
                 {
-                    if (obj.Sort)
-                    {
-                        result = result.OrderBy(obj.exp);
-                    }
-                    else
-                    {
-                        result = result.OrderByDescending(obj.exp);
-                    }
+                    result = result.OrderBy(obj.exp);
                 }
-                return result.Take(n).ToList();
+                else
+                {
+                    result = result.OrderByDescending(obj.exp);
+                }
             }
+            return result.Take(n).ToList();
         }
 
         /// <summary>
@@ -120,10 +108,8 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public T Get<T>(object id) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                return session.Get<T>(id);
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            return session.Get<T>(id);
         }
 
         /// <summary>
@@ -134,10 +120,8 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public IList<T> Find<T>(Expression<Func<T, bool>> expression) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                return session.Query<T>().Where(expression).ToList();
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            return session.Query<T>().Where(expression).ToList();
         }
 
         /// <summary>
@@ -149,23 +133,20 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public IList<T> Find<T>(Expression<Func<T, bool>> expression, List<OrderBy<T>> sortList) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
+            ISession session = NHibernateHelper<T>.OpenSession();
+            var result = session.Query<T>().Where(expression);
+            foreach (var obj in sortList)
             {
-                var result = session.Query<T>().Where(expression);
-
-                foreach (var obj in sortList)
+                if (obj.Sort)
                 {
-                    if (obj.Sort)
-                    {
-                        result = result.OrderBy(obj.exp);
-                    }
-                    else
-                    {
-                        result = result.OrderByDescending(obj.exp);
-                    }
+                    result = result.OrderBy(obj.exp);
                 }
-                return result.ToList();
+                else
+                {
+                    result = result.OrderByDescending(obj.exp);
+                }
             }
+            return result.ToList();
         }
 
         /// <summary>
@@ -177,10 +158,8 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public IPagedList<T> FindPagedList<T>(int pageIndex, int pageSize) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                return new PagedList<T>(session.Query<T>(), pageIndex, pageSize);
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            return new PagedList<T>(session.Query<T>(), pageIndex, pageSize);
         }
 
         /// <summary>
@@ -193,10 +172,8 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public IPagedList<T> FindPagedList<T>(int pageIndex, int pageSize, Expression<Func<T, bool>> expression) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                return new PagedList<T>(session.Query<T>().Where(expression), pageIndex, pageSize);
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            return new PagedList<T>(session.Query<T>().Where(expression), pageIndex, pageSize);
         }
 
         /// <summary>
@@ -210,19 +187,16 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public IPagedList<T> FindPagedList<T>(int pageIndex, int pageSize, Expression<Func<T, bool>> expression, List<OrderBy<T>> sortList) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
+            ISession session = NHibernateHelper<T>.OpenSession();
+            var result = session.Query<T>().Where(expression);
+            foreach (var obj in sortList)
             {
-                var result = session.Query<T>().Where(expression);
-
-                foreach (var obj in sortList)
-                {
-                    if (obj.Sort)
-                        result = result.OrderBy(obj.exp);
-                    else
-                        result = result.OrderByDescending(obj.exp);
-                }
-                return new PagedList<T>(result, pageIndex, pageSize);
+                if (obj.Sort)
+                    result = result.OrderBy(obj.exp);
+                else
+                    result = result.OrderByDescending(obj.exp);
             }
+            return new PagedList<T>(result, pageIndex, pageSize);
         }
 
         /// <summary>
@@ -233,12 +207,9 @@ namespace z.Foundation.Data
         /// <returns></returns>
         public object Save<T>(T item) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                object obj = session.Save(item);
-                session.Flush();
-                return obj;
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            object obj = session.Save(item);
+            return obj;
         }
 
         /// <summary>
@@ -248,11 +219,9 @@ namespace z.Foundation.Data
         /// <param name="item">需更新的对象</param>
         public void Update<T>(T item) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                session.Update(item);
-                session.Flush();
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            session.Update(item);
+            session.Flush();
         }
 
         /// <summary>
@@ -262,13 +231,10 @@ namespace z.Foundation.Data
         /// <param name="id">主键字段值</param>
         public void Delete<T>(object id) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                var model = session.Load<T>(id);
-
-                session.Delete(model);
-                session.Flush();
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            var model = session.Load<T>(id);
+            session.Delete(model);
+            session.Flush();
         }
 
         /// <summary>
@@ -278,11 +244,9 @@ namespace z.Foundation.Data
         /// <param name="item"></param>
         public void Delete<T>(T item) where T : class, IEntity, new()
         {
-            using (ISession session = NHibernateHelper<T>.OpenSession())
-            {
-                session.Delete(item);
-                session.Flush();
-            }
+            ISession session = NHibernateHelper<T>.OpenSession();
+            session.Delete(item);
+            session.Flush();
         }
     }
 }
