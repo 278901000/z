@@ -12,7 +12,7 @@ using NHibernate.Linq;
 using z.Foundation.Data;
 using z.AdminCenter.Entity;
 using System.Threading;
-using hk.papago.Entity.PaPaGoDB;
+//using hk.papago.Entity.PaPaGoDB;
 using System.Diagnostics;
 using NHibernate.Context;
 
