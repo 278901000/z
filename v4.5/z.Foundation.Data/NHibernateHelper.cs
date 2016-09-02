@@ -68,19 +68,7 @@ namespace z.Foundation.Data
 
             if (CurrentSessionContext.HasBind(SessionFactory))
             {
-                session = CurrentSessionContext.Unbind(SessionFactory);
-                if (session != null)
-                {
-                    if (session.IsOpen)
-                    {
-                        session.Flush();
-                        session.Close();
-                    }
-                    session.Dispose();
-                }
-
-                session = SessionFactory.OpenSession();
-                CurrentSessionContext.Bind(session);
+                session = SessionFactory.GetCurrentSession();
             }
             else
             {

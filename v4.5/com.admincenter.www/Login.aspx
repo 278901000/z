@@ -64,7 +64,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <% if (bUnionLogin)
                     { %>
                  <button type="submit" class="btn blue pull-right" disabled>
-                    多站点联合登录中，请稍候...
+                    联合登录中...
                 </button>
                 <% }
                     else { %>
