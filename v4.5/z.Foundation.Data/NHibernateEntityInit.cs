@@ -1,4 +1,5 @@
 ﻿using NHibernate.Cfg;
+using NHibernate.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace z.Foundation.Data
                 var dbs = strAllDB.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                 foreach (var item in dbs)
                 {
-                    var sessionFactory = (new Configuration()).Configure(string.Format("{0}/{1}.cfg.xml", Utility.ApplicationPath(), item)).BuildSessionFactory();
+                    var sessionFactory = (new Configuration()).Configure(string.Format("{0}/{1}.cfg.xml", Utility.ApplicationPath(), item)).CurrentSessionContext<CallSessionContext>().BuildSessionFactory();
                     cache.SetCache(item, sessionFactory, TimeSpan.Zero);
                 }
             }

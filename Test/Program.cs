@@ -84,11 +84,11 @@ namespace Test
             //var d = session4.Query<brand>().ToList();
 
 
-            for (int i = 0; i < 1000000; i++)
+            for (int i = 0; i < 1000; i++)
             {
-                //IRepository repository = new NHibernateRepository();
+                IRepository repository = new NHibernateRepository();
 
-                //var adminSystem = repository.First<admin_system>(e => 1 == 1);
+                var adminSystem = repository.First<admin_system>(e => 1 == 1);
 
                 ////IQueryable<admin_system> queryable = repository.AsQueryable<admin_system>();
                 ////var result = new PagedList<admin_system>(queryable, 1, 10);
@@ -103,8 +103,8 @@ namespace Test
                 //}
 
 
-                NHibernateHelper<admin_system>.OpenSession();
-                Thread.Sleep(100);
+                //NHibernateHelper<admin_system>.OpenSession();
+                //Thread.Sleep(100);
             }
 
 
