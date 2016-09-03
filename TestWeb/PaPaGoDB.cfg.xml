@@ -6,6 +6,7 @@
     <property name="connection.driver_class">NHibernate.Driver.MySqlDataDriver</property>
     <property name="connection.connection_string">Data Source=120.76.41.193;Database=papago;User ID=root;Password=papago;</property>
     <property name="show_sql">false</property>
+    <property name="current_session_context_class">web</property>
     <mapping assembly="hk.papago.Entity.PaPaGoDB"/>
   </session-factory>
 </hibernate-configuration>
