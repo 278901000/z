@@ -626,6 +626,7 @@
     <Content Include="Resource\plugins\qiniu\package.json" />
     <Content Include="Resource\plugins\qiniu\README.md" />
     <Content Include="Resource\plugins\plupload\.DS_Store" />
+    <Content Include="WCF.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
