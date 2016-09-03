@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Lock.aspx.cs" Inherits="com.admincenter.www.Lock" %>
