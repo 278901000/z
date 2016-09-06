@@ -40,7 +40,7 @@ namespace z.Foundation.Data
                         obj = cache.GetCache(strCacheKey);
                         if (obj == null)
                         {
-                            _SessionFactory = (new Configuration()).Configure(string.Format("{0}/{1}.cfg.xml", Utility.ApplicationPath(), ConfigFileName)).CurrentSessionContext<CallSessionContext>().BuildSessionFactory();
+                            _SessionFactory = (new Configuration()).Configure(string.Format("{0}/{1}.cfg.xml", Utility.ApplicationPath(), ConfigFileName)).BuildSessionFactory();
                             cache.SetCache(strCacheKey, _SessionFactory, TimeSpan.Zero);
                         }
                         else

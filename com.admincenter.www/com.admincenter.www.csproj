@@ -626,6 +626,7 @@
     <Content Include="Resource\plugins\qiniu\package.json" />
     <Content Include="Resource\plugins\qiniu\README.md" />
     <Content Include="Resource\plugins\plupload\.DS_Store" />
+    <Content Include="WCF.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2485,27 +2486,27 @@
     <Folder Include="Resource\plugins\plupload\jquery.ui.plupload\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\z.AdminCenter.Entity\z.AdminCenter.Entity.csproj">
+    <ProjectReference Include="..\v4.5\z.AdminCenter.Entity\z.AdminCenter.Entity.csproj">
       <Project>{5eb1258e-138b-452c-9fe9-f6c184c6957c}</Project>
       <Name>z.AdminCenter.Entity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\z.AdminCenter.Logic\z.AdminCenter.Logic.csproj">
+    <ProjectReference Include="..\v4.5\z.AdminCenter.Logic\z.AdminCenter.Logic.csproj">
       <Project>{dca912e4-6337-4190-aaf6-6f47a79c60a0}</Project>
       <Name>z.AdminCenter.Logic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\z.AdminCenter.WebForm.Driver\z.AdminCenter.WebForm.Driver.csproj">
+    <ProjectReference Include="..\v4.5\z.AdminCenter.WebForm.Driver\z.AdminCenter.WebForm.Driver.csproj">
       <Project>{d327771e-be5b-4f13-8bba-e0c112c12e6e}</Project>
       <Name>z.AdminCenter.WebForm.Driver</Name>
     </ProjectReference>
-    <ProjectReference Include="..\z.Foundation.Data\z.Foundation.Data.csproj">
+    <ProjectReference Include="..\v4.5\z.Foundation.Data\z.Foundation.Data.csproj">
       <Project>{37e03fa3-0531-4a3a-9eaf-a0469b20f9f1}</Project>
       <Name>z.Foundation.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\z.Foundation.LogicInvoke\z.Foundation.LogicInvoke.csproj">
+    <ProjectReference Include="..\v4.5\z.Foundation.LogicInvoke\z.Foundation.LogicInvoke.csproj">
       <Project>{867c810e-1cdc-4663-b7e3-a6c6d951852d}</Project>
       <Name>z.Foundation.LogicInvoke</Name>
     </ProjectReference>
-    <ProjectReference Include="..\z.Foundation\z.Foundation.csproj">
+    <ProjectReference Include="..\v4.5\z.Foundation\z.Foundation.csproj">
       <Project>{866936fe-f516-4394-8a19-a11757e1e2b2}</Project>
       <Name>z.Foundation</Name>
     </ProjectReference>
