@@ -66,15 +66,18 @@ namespace z.Foundation.Data
         {
             ISession session;
 
-            if (CurrentSessionContext.HasBind(SessionFactory))
-            {
-                session = SessionFactory.GetCurrentSession();
-            }
-            else
-            {
-                session = SessionFactory.OpenSession();
-                CurrentSessionContext.Bind(session);
-            }
+            //if (CurrentSessionContext.HasBind(SessionFactory))
+            //{
+            //    session = SessionFactory.GetCurrentSession();
+            //}
+            //else
+            //{
+            //    session = SessionFactory.OpenSession();
+            //    CurrentSessionContext.Bind(session);
+            //}
+
+            session = SessionFactory.OpenSession();
+            CurrentSessionContext.Bind(session);
 
             return session;
         }
@@ -93,8 +96,6 @@ namespace z.Foundation.Data
                     {
                         if (!dict.ContainsKey(classFullName))
                         {
-                            dict[classFullName] = "";
-
                             var customAttributes = typeof(T).GetCustomAttributes(false);
                             foreach (var item in customAttributes)
                             {
