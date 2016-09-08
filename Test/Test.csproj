@@ -134,6 +134,10 @@
       <Project>{37e03fa3-0531-4a3a-9eaf-a0469b20f9f1}</Project>
       <Name>z.Foundation.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\v4.5\z.Foundation\z.Foundation.csproj">
+      <Project>{866936fe-f516-4394-8a19-a11757e1e2b2}</Project>
+      <Name>z.Foundation</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminCenterDB.cfg.xml">

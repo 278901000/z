@@ -15,6 +15,7 @@ using System.Threading;
 using hk.papago.Entity.PaPaGoDB;
 using System.Diagnostics;
 using NHibernate.Context;
+using z.Foundation;
 
 namespace Test
 {
@@ -31,9 +32,63 @@ namespace Test
             //    Console.WriteLine("{0,-5}  -->  {1}", number, result);
             //}
 
-            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
 
-            //string strKeyword = GetKeyWordsSplitBySpace("荷兰牛栏奶粉1+段800kg", new PanGuTokenizer());
+            //string strOriginAddress = "江苏省南通市海门市海门叠石桥国际家纺城三期一楼2区29号";
+            string strOriginAddress = "内蒙古省巴彦淖尔盟市临河区团结路美丽洋房一单元5";
+            strOriginAddress = strOriginAddress.Replace(" ", "");
+            string strKeyword = GetKeyWordsSplitBySpace(strOriginAddress, new PanGuTokenizer());
+            List<string> addressList = strKeyword.Split(' ').ToList();
+
+            int loop = 3;
+            bool bMunicipality = false;
+            if (strOriginAddress.IsMatch("^北京|上海|重庆|天津"))
+            {
+                loop = 2;
+                bMunicipality = true;
+            }
+
+            if (addressList.Count >= loop + 1)
+            {
+                string strPartOfAddress = "";
+                List<string> partOfAddressList = new List<string>();
+                for (int i = 0; i < loop; i++)
+                {
+                    strPartOfAddress += addressList[i];
+
+                    if (addressList[i] == "省")
+                    {
+                        loop++;
+                        if (bMunicipality)
+                        {
+                            loop++;
+                        }
+                        continue;
+                    }
+
+                    partOfAddressList.Add(addressList[i]);
+                }
+
+                string strProvince = partOfAddressList[0];
+                string strCity = partOfAddressList[1];
+                string strArea = "";
+                if (partOfAddressList.Count > 2)
+                {
+                    strArea = partOfAddressList[2];
+                }
+
+                string strDetailAddress = strOriginAddress.Replace(strPartOfAddress, "");
+
+
+                string a = "";
+            }
+
+
+
+
+
+
+
 
 
 
@@ -83,16 +138,16 @@ namespace Test
             //ISession session4 = NHibernateHelper<brand>.OpenSession();
             //var d = session4.Query<brand>().ToList();
 
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            for (int i = 0; i < 100000; i++)
-            {
-                NHibernateHelper<admin_system>.OpenSession();
-            }
+            //Stopwatch stopwatch = new Stopwatch();
+            //stopwatch.Start();
+            //for (int i = 0; i < 100000; i++)
+            //{
+            //    NHibernateHelper<admin_system>.OpenSession();
+            //}
 
-            stopwatch.Stop();
+            //stopwatch.Stop();
 
-            Console.WriteLine(stopwatch.ElapsedMilliseconds);
+            //Console.WriteLine(stopwatch.ElapsedMilliseconds);
 
             //IRepository repository = new NHibernateRepository();
 
@@ -115,7 +170,7 @@ namespace Test
 
 
             //repository.Delete<admin_system>(25);
-            
+
 
 
             Console.Write("finish");
