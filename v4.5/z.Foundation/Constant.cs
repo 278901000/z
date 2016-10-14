@@ -49,8 +49,8 @@ namespace z.Foundation
         /// <summary>
         /// 手机号码正则表达式
         /// </summary>
-        public static readonly string MobileRegex = @"^0?(13[0-9]|14[57]|15[012356789]|17[0678]|18[0-9])[0-9]{8}$";
-
+        public static readonly string MobileRegex = @"^0?(13[0-9]|14[57]|15[012356789]|17[0-9]|18[0-9])[0-9]{8}$";
+        
         /// <summary>
         /// 邮箱正则表达式
         /// </summary>
