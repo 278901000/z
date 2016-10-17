@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Xml.Serialization;
 using System.Data;
-
+using System.Security.Cryptography;
 
 namespace z.Foundation
 {
@@ -27,14 +27,47 @@ namespace z.Foundation
         /// <returns></returns>
         public static string Serialize<T>(this T source)
         {
+            //IFormatter formatter = new BinaryFormatter();
+            //MemoryStream ms = new MemoryStream();
+            //formatter.Serialize(ms, source);
+            //ms.Seek(0, SeekOrigin.Begin);
+            //byte[] bt = new byte[ms.Length];
+            //ms.Read(bt, 0, bt.Length);
+            //ms.Close();
+            //return Convert.ToBase64String(bt);
+
+
+            string strBase64 = "";
             IFormatter formatter = new BinaryFormatter();
-            MemoryStream ms = new MemoryStream();
-            formatter.Serialize(ms, source);
-            ms.Seek(0, SeekOrigin.Begin);
-            byte[] bt = new byte[ms.Length];
-            ms.Read(bt, 0, bt.Length);
-            ms.Close();
-            return Convert.ToBase64String(bt);
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                formatter.Serialize(memoryStream, source);
+
+                long lSize = memoryStream.Length / 1024 / 1024;
+                if (lSize >= 20)
+                {
+                    string strSerializeFile = Utility.GetConfigValue("FileServer") + "\\serialize\\" + Guid.NewGuid() + ".txt";
+                    using (FileStream fileStream = new FileStream(strSerializeFile, FileMode.Create))
+                    using (CryptoStream cryptoStream = new CryptoStream(fileStream, new ToBase64Transform(), CryptoStreamMode.Write))
+                    {
+                        formatter.Serialize(cryptoStream, source);
+                        cryptoStream.FlushFinalBlock();
+                    }
+
+                    using (StreamReader streamReader = new StreamReader(strSerializeFile))
+                    {
+                        strBase64 = streamReader.ReadToEnd();
+                    }
+
+                    File.Delete(strSerializeFile);
+                }
+                else
+                {
+                    strBase64 = Convert.ToBase64String(memoryStream.ToArray());
+                }
+            }
+
+            return strBase64;
         }
 
         /// <summary>
