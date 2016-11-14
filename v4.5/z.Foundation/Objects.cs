@@ -42,29 +42,7 @@ namespace z.Foundation
             using (MemoryStream memoryStream = new MemoryStream())
             {
                 formatter.Serialize(memoryStream, source);
-
-                long lSize = memoryStream.Length / 1024 / 1024;
-                if (lSize >= 20)
-                {
-                    string strSerializeFile = Utility.GetConfigValue("FileServer") + "\\serialize\\" + Guid.NewGuid() + ".txt";
-                    using (FileStream fileStream = new FileStream(strSerializeFile, FileMode.Create))
-                    using (CryptoStream cryptoStream = new CryptoStream(fileStream, new ToBase64Transform(), CryptoStreamMode.Write))
-                    {
-                        formatter.Serialize(cryptoStream, source);
-                        cryptoStream.FlushFinalBlock();
-                    }
-
-                    using (StreamReader streamReader = new StreamReader(strSerializeFile))
-                    {
-                        strBase64 = streamReader.ReadToEnd();
-                    }
-
-                    File.Delete(strSerializeFile);
-                }
-                else
-                {
-                    strBase64 = Convert.ToBase64String(memoryStream.ToArray());
-                }
+                strBase64 = Convert.ToBase64String(memoryStream.ToArray());
             }
 
             return strBase64;
