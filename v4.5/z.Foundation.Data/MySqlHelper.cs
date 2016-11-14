@@ -155,6 +155,7 @@ namespace z.Foundation.Data
                 dataTable = ConvertDataReaderToDataTable(rdr);
                 rdr.Close();
             }
+            dataTable.RemotingFormat = SerializationFormat.Binary;
             return dataTable;
         }
 
