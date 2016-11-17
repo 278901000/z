@@ -180,15 +180,12 @@ namespace z.Foundation.Data
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings[connName].ConnectionString))
             {
                 PrepareCommand(cmd, connection, null, cmdType, cmdText, commandParameters);
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
-                DataSet dataSet = new DataSet();
-                sqlDataAdapter.Fill(dataSet);
+                SqlDataReader rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 cmd.Parameters.Clear();
-                if (dataSet.Tables.Count > 0)
-                {
-                    dataTable = dataSet.Tables[0];
-                }
+                dataTable = ConvertDataReaderToDataTable(rdr);
+                rdr.Close();
             }
+            dataTable.RemotingFormat = SerializationFormat.Binary;
             return dataTable;
         }
 
@@ -248,6 +245,30 @@ namespace z.Foundation.Data
                     cmd.Parameters.Add(parm);
                 }
             }
+        }
+
+        /// <summary>
+        /// 将DataReader转化为DataTable
+        /// </summary>
+        /// <param name="dataReader"></param>
+        /// <returns></returns>
+        private static DataTable ConvertDataReaderToDataTable(SqlDataReader dataReader)
+        {
+            DataTable objDataTable = new DataTable();
+            int intFieldCount = dataReader.FieldCount;
+            for (int intCounter = 0; intCounter < intFieldCount; intCounter++)
+            {
+                objDataTable.Columns.Add(dataReader.GetName(intCounter), dataReader.GetFieldType(intCounter));
+            }
+            objDataTable.BeginLoadData();
+            object[] objValues = new object[intFieldCount];
+            while (dataReader.Read())
+            {
+                dataReader.GetValues(objValues);
+                objDataTable.LoadDataRow(objValues, true);
+            }
+            objDataTable.EndLoadData();
+            return objDataTable;
         }
     }
 }
