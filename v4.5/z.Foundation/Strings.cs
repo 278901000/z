@@ -261,19 +261,33 @@ namespace z.Foundation
         /// <returns></returns>
         public static T Deserialize<T>(this string source)
         {
+            //T obj = default(T);
+            //try
+            //{
+            //    IFormatter formatter = new BinaryFormatter();
+            //    byte[] bt = System.Convert.FromBase64String(source);
+            //    MemoryStream ms = new MemoryStream(bt);
+            //    obj = (T)formatter.Deserialize(ms);
+            //    ms.Close();
+            //}
+            //catch
+            //{
+            //    throw;
+            //}
+            //return obj;
+
+
             T obj = default(T);
-            try
+            IFormatter formatter = new BinaryFormatter();
+            using (MemoryStream memoryStream = new MemoryStream())
             {
-                IFormatter formatter = new BinaryFormatter();
-                byte[] bt = System.Convert.FromBase64String(source);
-                MemoryStream ms = new MemoryStream(bt);
-                obj = (T)formatter.Deserialize(ms);
-                ms.Close();
+                byte[] bytes = Convert.FromBase64String(source);
+
+                memoryStream.Write(bytes, 0, bytes.Length);
+                memoryStream.Seek(0, SeekOrigin.Begin);
+                obj = (T)formatter.Deserialize(memoryStream);
             }
-            catch
-            {
-                throw;
-            }
+
             return obj;
         }
 

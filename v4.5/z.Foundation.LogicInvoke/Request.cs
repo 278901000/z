@@ -46,6 +46,24 @@ namespace z.Foundation.LogicInvoke
             get;
             set;
         }
+
+        /// <summary>
+        /// 服务地址（非正式失效，不建议使用）
+        /// </summary>
+        public string Address
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// WCF绑定协议（非正式失效，不建议使用）
+        /// </summary>
+        public string Binding
+        {
+            get;
+            set;
+        }
     }
 
     /// <summary>
@@ -84,6 +102,24 @@ namespace z.Foundation.LogicInvoke
         /// 泛型类型参数对象
         /// </summary>
         public T Parameter
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 服务地址（非正式失效，不建议使用）
+        /// </summary>
+        public string Address
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// WCF绑定协议（非正式失效，不建议使用）
+        /// </summary>
+        public string Binding
         {
             get;
             set;

@@ -46,8 +46,19 @@ namespace z.Foundation.LogicInvoke
 
             try
             {
-                string key = string.Format("{0}:{1}:{2}", request.Target, request.Class, request.Method);
-                WCFApp wcfApp = GetWcfApp(key);
+                Request req = (Request)request;
+                WCFApp wcfApp = new WCFApp();
+
+                if (!string.IsNullOrEmpty(req.Address))
+                {
+                    wcfApp = new WCFApp() { Address = req.Address, Binding = string.IsNullOrEmpty(req.Binding) ? "BasicHttpBinding" : req.Binding };
+                }
+                else
+                {
+                    string key = string.Format("{0}:{1}:{2}", request.Target, request.Class, request.Method);
+                    wcfApp = GetWcfApp(key);
+                }
+
                 //WCF调用
                 Binding binding = null;
                 switch (wcfApp.Binding)

@@ -155,33 +155,10 @@ namespace z.Foundation.Data
                 dataTable = ConvertDataReaderToDataTable(rdr);
                 rdr.Close();
             }
+            dataTable.RemotingFormat = SerializationFormat.Binary;
             return dataTable;
         }
-
-        /// <summary>
-        /// 将DataReader转化为DataTable
-        /// </summary>
-        /// <param name="dataReader"></param>
-        /// <returns></returns>
-        private static DataTable ConvertDataReaderToDataTable(MySqlDataReader dataReader)
-        {
-            DataTable objDataTable = new DataTable();
-            int intFieldCount = dataReader.FieldCount;
-            for (int intCounter = 0; intCounter < intFieldCount; intCounter++)
-            {
-                objDataTable.Columns.Add(dataReader.GetName(intCounter), dataReader.GetFieldType(intCounter));
-            }
-            objDataTable.BeginLoadData();
-            object[] objValues = new object[intFieldCount];
-            while (dataReader.Read())
-            {
-                dataReader.GetValues(objValues);
-                objDataTable.LoadDataRow(objValues, true);
-            }
-            objDataTable.EndLoadData();
-            return objDataTable;
-        }
-
+        
         /// <summary>
         /// Prepare a command for execution
         /// </summary>
@@ -216,6 +193,30 @@ namespace z.Foundation.Data
                     cmd.Parameters.Add(parm);
                 }
             }
+        }
+
+        /// <summary>
+        /// 将DataReader转化为DataTable
+        /// </summary>
+        /// <param name="dataReader"></param>
+        /// <returns></returns>
+        private static DataTable ConvertDataReaderToDataTable(MySqlDataReader dataReader)
+        {
+            DataTable objDataTable = new DataTable();
+            int intFieldCount = dataReader.FieldCount;
+            for (int intCounter = 0; intCounter < intFieldCount; intCounter++)
+            {
+                objDataTable.Columns.Add(dataReader.GetName(intCounter), dataReader.GetFieldType(intCounter));
+            }
+            objDataTable.BeginLoadData();
+            object[] objValues = new object[intFieldCount];
+            while (dataReader.Read())
+            {
+                dataReader.GetValues(objValues);
+                objDataTable.LoadDataRow(objValues, true);
+            }
+            objDataTable.EndLoadData();
+            return objDataTable;
         }
     }
 }

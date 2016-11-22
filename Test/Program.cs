@@ -16,6 +16,8 @@ using System.Threading;
 using System.Diagnostics;
 using NHibernate.Context;
 using z.Foundation;
+using System.Web;
+using System.IO;
 
 namespace Test
 {
@@ -23,157 +25,269 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            //sbyte[] numbers = { SByte.MinValue, -1, 0, 10, 100, SByte.MaxValue };
-            //bool result;
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
 
-            //foreach (sbyte number in numbers)
+
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+
+            //Segment segment = new Segment();
+            //PanGu.Match.MatchOptions options = new PanGu.Match.MatchOptions();
+            //PanGu.Setting.PanGuSettings.Config.MatchOptions.CopyTo(options);
+            //options.MultiDimensionality = false;
+
+            //StringBuilder result = new StringBuilder();
+
+            //ICollection<WordInfo> words = segment.DoSegment("广东省深圳市罗罗区", options);
+            //foreach (WordInfo word in words)
             //{
-            //    result = Convert.ToBoolean(number);
-            //    Console.WriteLine("{0,-5}  -->  {1}", number, result);
+            //    if (word == null)
+            //    {
+            //        continue;
+            //    }
+            //    result.AppendFormat("{0} ", word.Word);
             //}
 
-            PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            //string str = result.ToString();
 
-            //string strOriginAddress = "江苏省南通市海门市海门叠石桥国际家纺城三期一楼2区29号";
-            string strOriginAddress = "内蒙古省巴彦淖尔盟市临河区团结路美丽洋房一单元5";
-            strOriginAddress = strOriginAddress.Replace(" ", "");
-            string strKeyword = GetKeyWordsSplitBySpace(strOriginAddress, new PanGuTokenizer());
-            List<string> addressList = strKeyword.Split(' ').ToList();
+            //result = new StringBuilder();
+            //words = segment.DoSegment("广东省深圳市罗罗区", options);
+            //foreach (WordInfo word in words)
+            //{
+            //    if (word == null)
+            //    {
+            //        continue;
+            //    }
+            //    result.AppendFormat("{0} ", word.Word);
+            //}
 
-            int loop = 3;
-            bool bMunicipality = false;
-            if (strOriginAddress.IsMatch("^北京|上海|重庆|天津"))
+            // str = result.ToString();
+
+
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            //PanGu.Segment.ReInit();
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+
+
+
+
+
+            //words = segment.DoSegment("广东省深圳市罗湖区", options);
+            //foreach (WordInfo word in words)
+            //{
+            //    if (word == null)
+            //    {
+            //        continue;
+            //    }
+            //    result.AppendFormat("{0} ", word.Word);
+            //}
+
+            //string strTemp = result.ToString();
+
+            //string strOriginAddress = "广东省深圳市罗湖区";
+
+            //strOriginAddress = strOriginAddress.Replace(" ", "");//替换地址中的空格
+            //strOriginAddress = strOriginAddress.IsMatch("^中国") ? strOriginAddress.Substring(2, strOriginAddress.Length - 2) : strOriginAddress;//替换地址中的中国字样
+            //strOriginAddress = strOriginAddress.RegexReplace(@"\[|\]", "");//替换地址中特殊字符
+
+            ////对初步处理后的原始地址进行盘古分词
+            //string strKeyword = GetKeyWordsSplitBySpace(strOriginAddress, new PanGuTokenizer());
+            //List<string> addressList = strKeyword.Split(' ').ToList();
+
+            ////根据是否是直辖市来判断需要循环取省、市、区的次数
+            //int loop = 3;
+            //bool bMunicipality = false;
+            //if (strOriginAddress.IsMatch("^北京|上海|重庆|天津"))
+            //{
+            //    if (addressList.Count >= 2 && (addressList[1].IndexOf(addressList[0]) > -1 || addressList[0].IndexOf(addressList[1]) > -1))
+            //    {
+            //        loop = 3;
+            //    }
+            //    else
+            //    {
+            //        loop = 2;
+            //    }
+
+            //    bMunicipality = true;
+            //}
+
+            ////分词后的地址在长度上必须满足省、市、区、详细地址基本长度要求
+            //if (addressList.Count >= loop + 1)
+            //{
+            //    string strPartOfAddress = "";
+            //    List<string> partOfAddressList = new List<string>();
+
+            //    for (int i = 0; i < loop; i++)
+            //    {
+            //        strPartOfAddress += addressList[i];
+
+            //        //省被单独分隔成一个字时，代表该省实为自治区或直辖市
+            //        if (addressList[i] == "省")
+            //        {
+            //            loop++;
+            //            if (bMunicipality)
+            //            {
+            //                loop++;
+            //            }
+            //            continue;
+            //        }
+
+            //        partOfAddressList.Add(addressList[i]);
+            //    }
+
+            //    string strProvince = "";
+            //    string strCity = "";
+            //    string strArea = "";
+            //    string strDetailAddress = "";
+
+            //    //省、市、区处理
+            //    if (bMunicipality && partOfAddressList.Count < 3)
+            //    {
+            //        strProvince = strCity = partOfAddressList[0];
+            //        strArea = partOfAddressList[1];
+            //    }
+            //    else
+            //    {
+            //        strProvince = partOfAddressList[0];
+            //        strCity = partOfAddressList[1];
+            //        strArea = partOfAddressList[2];
+            //    }
+
+            //    //详细地址处理
+            //    strDetailAddress = strOriginAddress.Replace(strPartOfAddress, "");
+            //    strDetailAddress = strDetailAddress.Replace(strProvince, "");
+            //    strDetailAddress = strDetailAddress.Replace(strCity, "");
+            //    strDetailAddress = strDetailAddress.Replace(strArea, "");
+            //    if (strArea.IsMatch(@"^.+(?<!市)$") && strDetailAddress.IsMatch(@"^市.+"))
+            //    {
+            //        strDetailAddress = strDetailAddress.RegexReplace(@"^市", "");
+            //    }
+            //    if (strArea.IsMatch(@"^.+(?<!县)$") && strDetailAddress.IsMatch(@"^县.+"))
+            //    {
+            //        strDetailAddress = strDetailAddress.RegexReplace(@"^县", "");
+            //    }
+            //    if (strArea.IsMatch(@"^.+(?<!区)$") && strDetailAddress.IsMatch(@"^区.+"))
+            //    {
+            //        strDetailAddress = strDetailAddress.RegexReplace(@"^区", "");
+            //    }
+            //    if (strArea.IsMatch(@"^.+(?<!镇)$") && strDetailAddress.IsMatch(@"^镇.+"))
+            //    {
+            //        strDetailAddress = strDetailAddress.RegexReplace(@"^镇", "");
+            //    }
+
+            //    //标准化省、市、区
+            //    //TO DO
+
+
+
+
+            //    Console.WriteLine(strProvince);
+            //    Console.WriteLine(strCity);
+            //    Console.WriteLine(strArea);
+            //    Console.WriteLine(strDetailAddress);
+            //}
+
+
+
+
+
+            //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
+            //string str = GetKeyWordsSplitBySpace("爱他美A2+段", new PanGuTokenizer());
+
+            //Console.WriteLine(str);
+
+            for (int i = 0; i < 100; i++)
             {
-                loop = 2;
-                bMunicipality = true;
-            }
+                Console.WriteLine(i);
 
-            if (addressList.Count >= loop + 1)
-            {
-                string strPartOfAddress = "";
-                List<string> partOfAddressList = new List<string>();
-                for (int i = 0; i < loop; i++)
+                string strSource = "";
+                string strSerializeTempFile = Utility.GetConfigValue("FileServer") + "\\source.txt";
+                using (StreamReader sr = new StreamReader(strSerializeTempFile, Encoding.UTF8))
                 {
-                    strPartOfAddress += addressList[i];
-
-                    if (addressList[i] == "省")
-                    {
-                        loop++;
-                        if (bMunicipality)
-                        {
-                            loop++;
-                        }
-                        continue;
-                    }
-
-                    partOfAddressList.Add(addressList[i]);
+                    strSource = sr.ReadToEnd();
                 }
 
-                string strProvince = partOfAddressList[0];
-                string strCity = partOfAddressList[1];
-                string strArea = "";
-                if (partOfAddressList.Count > 2)
-                {
-                    strArea = partOfAddressList[2];
-                }
+                //string base64string = strSource.XmlSerialize(Encoding.UTF8);
 
-                string strDetailAddress = strOriginAddress.Replace(strPartOfAddress, "");
+                //string a = base64string.XmlDeserialize<string>(Encoding.UTF8);
 
 
-                string a = "";
+                string base64string = strSource.Serialize();
+
+                string a = base64string.Deserialize<string>();
+                //a = null;
+                ////base64string = null;
+                //GC.Collect();
+
+                //string base64string = strSource.JsonSerialize();
+
+                //string a = base64string.JsonDeserialize<string>();
+
+                //FileOperate.Write(base64string, Utility.GetConfigValue("FileServer") + "\\base64.txt");
             }
 
-
-
-
-
-
-
-
-
-
-
-            //for (int i = 0; i < 1; i++)
+            //for (int i = 0; i < 5; i++)
             //{
-            //    Stopwatch watch = new Stopwatch();
-            //    watch.Start();
-            //    ISession session = NHibernateHelper<order_info>.OpenSession();
-            //    watch.Stop();
-            //    Console.WriteLine(watch.ElapsedMilliseconds + "ms");
+            //    string strBase64 = "";
+            //    string strSerializeTempFile = Utility.GetConfigValue("FileServer") + "\\base64.txt";
+            //    using (StreamReader sr = new StreamReader(strSerializeTempFile, Encoding.UTF8))
+            //    {
+            //        strBase64 = sr.ReadToEnd();
+            //    }
 
-            //    Stopwatch watch1 = new Stopwatch();
-            //    watch1.Start();
-            //    ISession session1 = NHibernateHelper<order_info>.OpenSession();
-            //    watch1.Stop();
-            //    Console.WriteLine(watch1.ElapsedMilliseconds + "ms");
+            //    string strSource = strBase64.Deserialize<string>();
 
-            //    Stopwatch watch2 = new Stopwatch();
-            //    watch2.Start();
-            //    ISession session2 = NHibernateHelper<supplier>.OpenSession();
-            //    watch2.Stop();
-            //    Console.WriteLine(watch2.ElapsedMilliseconds + "ms");
-
-            //    Stopwatch watch3 = new Stopwatch();
-            //    watch3.Start();
-            //    ISession session3 = NHibernateHelper<seller>.OpenSession();
-            //    watch3.Stop();
-            //    Console.WriteLine(watch3.ElapsedMilliseconds + "ms");
+            //    //FileOperate.Write(strSource, Utility.GetConfigValue("FileServer") + "\\source1.txt");
             //}
 
-            //ISession session1 = NHibernateHelper<admin_system>.OpenSession();
-            //var a = session1.Query<admin_system>().ToList();
+            //TestClass testClass = new TestClass();
+            //testClass.Name = "hello world";
 
-            //ISession session5 = NHibernateHelper<admin_system>.OpenSession();
-            //var e = session5.Query<admin_system>().ToList();
+            //string base64string1 = testClass.Serialize();
 
-            //ISession session3 = NHibernateHelper<admin_user>.OpenSession();
-            //var c = session3.Query<admin_user>().ToList();
-
-            //ISession session2 = NHibernateHelper<supplier>.OpenSession();
-            //var b = session2.Query<supplier>().ToList();
-
-            //ISession session6 = NHibernateHelper<supplier>.OpenSession();
-            //var f = session6.Query<supplier>().ToList();
-
-            //ISession session4 = NHibernateHelper<brand>.OpenSession();
-            //var d = session4.Query<brand>().ToList();
-
-            //Stopwatch stopwatch = new Stopwatch();
-            //stopwatch.Start();
-            //for (int i = 0; i < 100000; i++)
-            //{
-            //    NHibernateHelper<admin_system>.OpenSession();
-            //}
-
-            //stopwatch.Stop();
-
-            //Console.WriteLine(stopwatch.ElapsedMilliseconds);
-
-            //IRepository repository = new NHibernateRepository();
-
-            //repository.Save<admin_system>(new admin_system()
-            //{
-            //    Name = "aaa123",
-            //    SysKey = "11223344",
-            //    Code = "adfadf",
-            //    URL = "http://adfadf",
-            //    CallBackUrl = "http://adfadf",
-            //    CreateBy = "a",
-            //    CreateOn = DateTime.UtcNow
-            //});
-
-            //var adminSystem = repository.Get<admin_system>(24);
-            //adminSystem.Name = "aaa-update";
-            //repository.Update<admin_system>(adminSystem);
-
-            //repository.Delete<admin_system>(adminSystem);
+            //var result1 = base64string1.Deserialize<TestClass>();
 
 
-            //repository.Delete<admin_system>(25);
+            //TestClass2 testClass2 = new TestClass2();
+            //testClass2.Name2 = "hello world";
+
+            //string base64string = testClass2.Serialize();
+
+            //var result = base64string.Deserialize<TestClass2>();
+
+
+            //AAClass aaClass = new AAClass();
+            //aaClass.Name = "hello world";
+
+            //string base64string1 = aaClass.Serialize();
+
+            //var result1 = base64string1.Deserialize<AAClass>();
 
 
 
-            Console.Write("finish");
+
+
+
+            //var result = base64string.Deserialize<TestClass>();
+
+
+
+            //Console.Write("finish");
+
+
+
 
             Console.Read();
         }
@@ -191,6 +305,45 @@ namespace Test
                 result.AppendFormat("{0} ", word.Word);
             }
             return result.ToString().Trim();
+        }
+    }
+
+    public static class Extensions
+    {
+        public static IEnumerable<IEnumerable<T>> Chunk<T>(this IEnumerable<T> list, int chunkSize)
+        {
+            while (list.Take(1).Count() > 0)
+            {
+                yield return list.Take(chunkSize);
+                list = list.Skip(chunkSize);
+            }
+        }
+    }
+
+    [Serializable]
+    public class TestClass
+    {
+        public string Name
+        {
+            get; set;
+        }
+    }
+
+    [Serializable]
+    public class AAClass
+    {
+        public string Name
+        {
+            get; set;
+        }
+    }
+
+    [Serializable]
+    public class TestClass2
+    {
+        public string Name2
+        {
+            get; set;
         }
     }
 }

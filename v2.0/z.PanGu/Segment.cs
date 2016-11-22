@@ -113,7 +113,7 @@ namespace PanGu
 
             while (cur != null)
             {
-                if (cur.Value.WordType == WordType.Symbol || cur.Value.WordType == WordType.English || cur.Value.WordType == WordType.SimplifiedChinese)
+                if (cur.Value.WordType == WordType.Symbol || cur.Value.WordType == WordType.English)
                 {
                     last = cur.Value.Position + cur.Value.Word.Length;
                     cur = cur.Next;
@@ -344,6 +344,8 @@ namespace PanGu
 
                 switch (cur.Value.WordType)
                 {
+                    #region 简体中文
+
                     case WordType.SimplifiedChinese:
 
                         string inputText = cur.Value.Word;
@@ -416,7 +418,13 @@ namespace PanGu
                         SuperLinkedListNode<WordInfo> removeItem = cur;
                         cur = lst.Next;
                         result.Remove(removeItem);
+
                         break;
+
+                    #endregion
+
+                    #region 英文
+
                     case WordType.English:
                         cur.Value.Rank = _Parameters.EnglishRank;
                         List<string> output;
@@ -525,6 +533,11 @@ namespace PanGu
                         }
 
                         break;
+
+                    #endregion
+
+                    #region 数字
+
                     case WordType.Numeric:
                         cur.Value.Word = ConvertChineseCapitalToAsiic(cur.Value.Word);
                         cur.Value.Rank = _Parameters.NumericRank;
@@ -536,10 +549,17 @@ namespace PanGu
 
                         //cur = cur.Next;
                         break;
+
+                    #endregion
+
+                    #region 字符
+
                     case WordType.Symbol:
                         cur.Value.Rank = _Parameters.SymbolRank;
                         cur = cur.Next;
                         break;
+
+#endregion
                     default:
                         cur = cur.Next;
                         break;
