@@ -12,7 +12,7 @@ using NHibernate.Linq;
 using z.Foundation.Data;
 using z.AdminCenter.Entity;
 using System.Threading;
-using hk.papago.Entity.PaPaGoDB;
+//using hk.papago.Entity.PaPaGoDB;
 using System.Diagnostics;
 using NHibernate.Context;
 using z.Foundation;
@@ -25,6 +25,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
+             
             //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
 
 
