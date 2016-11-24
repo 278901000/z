@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.apicenter.www", "com.ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "z.ApiCenter.Logic", "v4.5\z.ApiCenter.Logic\z.ApiCenter.Logic.csproj", "{878E7E32-9A9D-414A-AE1C-4C2F07E41640}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "z.ApiCenter.Entity", "v4.5\z.ApiCenter.Entity\z.ApiCenter.Entity.csproj", "{688BBC5A-81E8-41B9-9157-8A24F80F0CE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -197,6 +199,14 @@ Global
 		{878E7E32-9A9D-414A-AE1C-4C2F07E41640}.Release|Any CPU.Build.0 = Release|Any CPU
 		{878E7E32-9A9D-414A-AE1C-4C2F07E41640}.Release35|Any CPU.ActiveCfg = Release|Any CPU
 		{878E7E32-9A9D-414A-AE1C-4C2F07E41640}.Release35|Any CPU.Build.0 = Release|Any CPU
+		{688BBC5A-81E8-41B9-9157-8A24F80F0CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{688BBC5A-81E8-41B9-9157-8A24F80F0CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{688BBC5A-81E8-41B9-9157-8A24F80F0CE0}.Debug35|Any CPU.ActiveCfg = Debug|Any CPU
+		{688BBC5A-81E8-41B9-9157-8A24F80F0CE0}.Debug35|Any CPU.Build.0 = Debug|Any CPU
+		{688BBC5A-81E8-41B9-9157-8A24F80F0CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{688BBC5A-81E8-41B9-9157-8A24F80F0CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{688BBC5A-81E8-41B9-9157-8A24F80F0CE0}.Release35|Any CPU.ActiveCfg = Release|Any CPU
+		{688BBC5A-81E8-41B9-9157-8A24F80F0CE0}.Release35|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,5 +226,6 @@ Global
 		{5A6AFB41-632D-46C0-B1AB-EB8B10C70A2A} = {2E2DD1FD-1976-4AE5-8EF7-6E86246F1935}
 		{5D4AD9BE-1FFB-41AB-9943-25737971BF57} = {2E2DD1FD-1976-4AE5-8EF7-6E86246F1935}
 		{878E7E32-9A9D-414A-AE1C-4C2F07E41640} = {3A17954F-0DA0-4831-9692-C3860D359AE4}
+		{688BBC5A-81E8-41B9-9157-8A24F80F0CE0} = {3A17954F-0DA0-4831-9692-C3860D359AE4}
 	EndGlobalSection
 EndGlobal
