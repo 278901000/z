@@ -412,5 +412,19 @@ namespace z.Foundation
 
             return true;
         }
+
+        /// <summary>
+        /// 计算SHA1哈希值
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static string SHA1_Hash(this string source)
+        {
+            Encoding encoding = Encoding.UTF8;
+            byte[] bytes = encoding.GetBytes(source);
+            SHA1 sha1 = SHA1.Create();
+            byte[] hashBytes = sha1.ComputeHash(bytes);
+            return BitConverter.ToString(hashBytes).Replace("-", "");
+        }
     }
 }
