@@ -8,7 +8,7 @@ using z.Foundation.Data;
 
 namespace z.ApiCenter.Entity
 {
-	[Serializable, CustomData(ConnectionName = "AdminCenterDB"), Table("api_client")]
+	[Serializable, CustomData(ConnectionName = "ApiCenterDB"), Table("api_client")]
 	public partial class api_client : EntityBase
     {
 		/// <summary>
