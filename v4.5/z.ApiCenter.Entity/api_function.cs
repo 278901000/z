@@ -62,6 +62,16 @@ namespace z.ApiCenter.Entity
         }
 
 		/// <summary>
+		/// 是否删除
+		/// </summary>
+		[Column("Deleted")]
+		public virtual Boolean Deleted
+        {
+            get;
+            set;
+        }
+
+		/// <summary>
 		/// 创建人
 		/// </summary>
 		[Column("CreatedBy")]

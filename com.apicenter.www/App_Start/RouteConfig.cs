@@ -12,6 +12,7 @@ namespace com.apicenter.www
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.IgnoreRoute("WriteTicket");
 
             routes.MapRoute(
                 name: "Default",

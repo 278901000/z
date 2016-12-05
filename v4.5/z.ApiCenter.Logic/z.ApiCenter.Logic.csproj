@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,7 +43,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiClientExt.cs" />
+    <Compile Include="ApiClientFunctionManage.cs" />
+    <Compile Include="ApiClientMange.cs" />
+    <Compile Include="ApiFunctionExt.cs" />
+    <Compile Include="ApiFunctionManage.cs" />
+    <Compile Include="ApiManage.cs" />
+    <Compile Include="ApiPermissionTree.cs" />
+    <Compile Include="ApiSystemExt.cs" />
+    <Compile Include="ApiSystemManage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VerifySignParam.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\z.ApiCenter.Entity\z.ApiCenter.Entity.csproj">
+      <Project>{688bbc5a-81e8-41b9-9157-8a24f80f0ce0}</Project>
+      <Name>z.ApiCenter.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\z.Foundation.Data\z.Foundation.Data.csproj">
+      <Project>{37e03fa3-0531-4a3a-9eaf-a0469b20f9f1}</Project>
+      <Name>z.Foundation.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\z.Foundation\z.Foundation.csproj">
+      <Project>{866936fe-f516-4394-8a19-a11757e1e2b2}</Project>
+      <Name>z.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\z.Logic.Base\z.Logic.Base.csproj">
+      <Project>{ae35d916-2ee9-4a9c-82ea-bd6f1ccaeedd}</Project>
+      <Name>z.Logic.Base</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

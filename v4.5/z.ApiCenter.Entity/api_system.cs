@@ -42,6 +42,16 @@ namespace z.ApiCenter.Entity
         }
 
 		/// <summary>
+		/// 描述
+		/// </summary>
+		[Column("Description")]
+		public virtual String Description
+        {
+            get;
+            set;
+        }
+
+		/// <summary>
 		/// 系统的网站地址
 		/// </summary>
 		[Column("Url")]
@@ -66,6 +76,16 @@ namespace z.ApiCenter.Entity
 		/// </summary>
 		[Column("CreatedOn")]
 		public virtual DateTime CreatedOn
+        {
+            get;
+            set;
+        }
+
+		/// <summary>
+		/// 是否删除
+		/// </summary>
+		[Column("Deleted")]
+		public virtual Boolean Deleted
         {
             get;
             set;
