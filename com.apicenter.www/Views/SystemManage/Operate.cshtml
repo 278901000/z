@@ -1,0 +1,252 @@
+﻿@using z.AdminCenter.MVC.Driver;
+
+<!DOCTYPE html>
+
+<!--
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.1.1
+Version: 2.0.2
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    @{ Html.RenderPartial("Header"); }
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="page-header-fixed">
+    <!-- BEGIN HEADER -->
+    @{ Html.RenderPartial("Top"); }
+    <!-- END HEADER -->
+    <div class="clearfix">
+    </div>
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        @{ Html.RenderPartial("Navigation"); }
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <div class="page-content">
+                <!-- BEGIN PAGE HEADER-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                        <h3 class="page-title">
+                            Api System管理 <small></small>
+                        </h3>
+                        <ul class="page-breadcrumb breadcrumb">
+                            <li class="btn-group">
+                                <button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+                                    <span>
+                                        动作
+                                    </span>
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li>
+                                        <a href="/SystemManage/List">
+                                            Api System列表
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/SystemManage/Add">
+                                            添加Api System
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="javascript:history.go(-1)">
+                                            返回上一个页面
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <i class="fa fa-home"></i>
+                                <a href="/">
+                                    Home
+                                </a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    基础信息设置
+                                </a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <a href="/SystemManage/List">
+                                    Api System管理
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- END PAGE TITLE & BREADCRUMB-->
+                    </div>
+                </div>
+                <!-- END PAGE HEADER-->
+                <!-- BEGIN PAGE CONTENT-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- BEGIN SAMPLE FORM PORTLET-->
+                        <div class="portlet box blue">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="fa fa-reorder"></i>@ViewBag.Title
+                                </div>
+                            </div>
+                            <div class="portlet-body form">
+                                <form id="form1" class="form-horizontal" role="form" method="post" action="">
+                                    <div class="form-body">
+                                        <div class="alert alert-danger @(string.IsNullOrEmpty(ViewBag.Msg) ? " display-hide" : "")">
+                                            <button class="close" data-close="alert"></button>
+                                            @(string.IsNullOrEmpty(ViewBag.Msg) ? "信息填写有误，请重新填写" : ViewBag.Msg)
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">
+                                                系统名称<span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-md-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input name="Name" value="@ViewBag.Name" type="text" class="form-control" placeholder="输入系统名称">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">
+                                                系统代码<span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-md-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input name="SystemCode" value="@ViewBag.SystemCode" type="text" class="form-control" placeholder="输入系统代码">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">
+                                                Url
+                                            </label>
+                                            <div class="col-md-6">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input name="Url" value="@ViewBag.Url" type="text" class="form-control" placeholder="输入Url地址">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">描述</label>
+                                            <div class="col-md-6">
+                                                <textarea name="Description" class="form-control" rows="2">@ViewBag.Description</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions fluid">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button type="submit" class="btn blue">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- END SAMPLE FORM PORTLET-->
+                    </div>
+                </div>
+                <!-- END PAGE CONTENT-->
+            </div>
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    @{ Html.RenderPartial("Bottom"); }
+    <!-- END FOOTER -->
+    @{ Html.RenderPartial("Footer"); }
+    <script type="text/javascript">
+
+        //Begin Validation
+        var handleValidation = function () {
+            var form = $('#form1');
+            var error = $('.alert-danger', form);
+            var success = $('.alert-success', form);
+
+            form.validate({
+                errorElement: 'span', //default input error message container
+                errorClass: 'help-block', // default input error message class
+                focusInvalid: false, // do not focus the last invalid input
+                ignore: "",
+                rules: {
+                    Name: {
+                        required: true
+                    }
+                },
+
+                messages: {
+                    Name: {
+                        required: '请输入系统名称'
+                    },
+                    SystemCode: {
+                        required: '请输入系统代码'
+                    }
+                },
+
+                invalidHandler: function (event, validator) { //display error alert on form submit
+                    success.hide();
+                    error.show();
+                    App.scrollTo(error, -200);
+                },
+
+                highlight: function (element) { // hightlight error inputs
+                    $(element)
+                        .closest('.form-group').addClass('has-error'); // set error class to the control group
+                },
+
+                unhighlight: function (element) { // revert the change done by hightlight
+                    $(element)
+                        .closest('.form-group').removeClass('has-error'); // set error class to the control group
+                },
+
+                success: function (label) {
+                    //label
+                    //    .closest('.form-group').removeClass('has-error'); // set success class to the control group
+                    label.remove();
+                },
+
+                submitHandler: function (form) {
+                    success.show();
+                    error.hide();
+                    form.submit();
+                }
+            });
+        }
+        //END Validation
+
+        $(document).ready(function () {
+            handleValidation();
+
+            //Active Menu
+            ActiveMenu('API_CENTER_SETUP,API_CENTER_SETUP_SYSTEM_MANAGE_LIST')
+        })
+    </script>
+</body>
+<!-- END BODY -->
+</html>

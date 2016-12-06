@@ -8,7 +8,7 @@ using z.Foundation.Data;
 
 namespace z.ApiCenter.Entity
 {
-	[Serializable, CustomData(ConnectionName = "AdminCenterDB"), Table("api_client")]
+	[Serializable, CustomData(ConnectionName = "ApiCenterDB"), Table("api_client")]
 	public partial class api_client : EntityBase
     {
 		/// <summary>
@@ -46,6 +46,16 @@ namespace z.ApiCenter.Entity
 		/// </summary>
 		[Column("SecretKey")]
 		public virtual String SecretKey
+        {
+            get;
+            set;
+        }
+
+		/// <summary>
+		/// 是否删除
+		/// </summary>
+		[Column("Deleted")]
+		public virtual Boolean Deleted
         {
             get;
             set;

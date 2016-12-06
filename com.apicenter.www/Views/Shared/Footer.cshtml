@@ -1,0 +1,65 @@
+﻿@using z.AdminCenter.MVC.Driver;
+
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+   <script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/respond.min.js"></script>
+   <script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/excanvas.min.js"></script>
+   <![endif]-->
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootbox/bootbox.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery-multi-select/js/jquery.multi-select.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/data-tables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/data-tables/DT_bootstrap.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-toastr/toastr.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery-validation/dist/additional-methods.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/backstretch/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/ztree/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/ajaxfileupload/ajaxfileupload.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery.pulsate.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-fileinput/bootstrap-fileinput.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery-file-download/jquery.fileDownload.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-modal/js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/plupload/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/qiniu/src/qiniu.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/ckeditor_full/ckeditor.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/sortable/sortable.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/clockface/js/clockface.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="http://@ControllerAdminBase.AdminCenterDomain/Resource/plugins/jquery-validation/lib/jquery.form.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script>var adminCenterDomain='http://@ControllerAdminBase.AdminCenterDomain';</script>
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/scripts/global.js"></script>
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/scripts/core/app.js"></script>
+<script src="http://@ControllerAdminBase.AdminCenterDomain/Resource/scripts/custom/ui-extended-modals.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        App.init();
+        //UIExtendedModals.init();
+    });
+</script>
+<!-- END JAVASCRIPTS -->

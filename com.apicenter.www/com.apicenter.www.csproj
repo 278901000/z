@@ -89,11 +89,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ApiCenterDB.cfg.xml" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ApiBaseController.cs" />
+    <Compile Include="Controllers\ApiCenterController.cs" />
+    <Compile Include="Controllers\ClientManageController.cs" />
+    <Compile Include="Controllers\FunctionManageController.cs" />
+    <Compile Include="Controllers\SystemManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -102,6 +108,19 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="LogicInvoker.config" />
+    <Content Include="WCF.config" />
+    <Content Include="Views\Shared\Bottom.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Shared\Navigation.cshtml" />
+    <Content Include="Views\Shared\Top.cshtml" />
+    <Content Include="Views\SystemManage\List.cshtml" />
+    <Content Include="Views\SystemManage\Operate.cshtml" />
+    <Content Include="Views\ClientManage\Operate.cshtml" />
+    <Content Include="Views\ClientManage\List.cshtml" />
+    <Content Include="Views\FunctionManage\List.cshtml" />
+    <Content Include="Views\FunctionManage\Operate.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,8 +130,41 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\ApiBase\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\v4.5\z.AdminCenter.Entity\z.AdminCenter.Entity.csproj">
+      <Project>{5eb1258e-138b-452c-9fe9-f6c184c6957c}</Project>
+      <Name>z.AdminCenter.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\v4.5\z.AdminCenter.Logic\z.AdminCenter.Logic.csproj">
+      <Project>{dca912e4-6337-4190-aaf6-6f47a79c60a0}</Project>
+      <Name>z.AdminCenter.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\v4.5\z.AdminCenter.MVC.Driver\z.AdminCenter.MVC.Driver.csproj">
+      <Project>{3d03cfc1-7a5d-4cd9-ad04-6ae1f685b078}</Project>
+      <Name>z.AdminCenter.MVC.Driver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\v4.5\z.ApiCenter.Entity\z.ApiCenter.Entity.csproj">
+      <Project>{688bbc5a-81e8-41b9-9157-8a24f80f0ce0}</Project>
+      <Name>z.ApiCenter.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\v4.5\z.ApiCenter.Logic\z.ApiCenter.Logic.csproj">
+      <Project>{878e7e32-9a9d-414a-ae1c-4c2f07e41640}</Project>
+      <Name>z.ApiCenter.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\v4.5\z.Foundation.Data\z.Foundation.Data.csproj">
+      <Project>{37e03fa3-0531-4a3a-9eaf-a0469b20f9f1}</Project>
+      <Name>z.Foundation.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\v4.5\z.Foundation.LogicInvoke\z.Foundation.LogicInvoke.csproj">
+      <Project>{867c810e-1cdc-4663-b7e3-a6c6d951852d}</Project>
+      <Name>z.Foundation.LogicInvoke</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\v4.5\z.Foundation\z.Foundation.csproj">
+      <Project>{866936fe-f516-4394-8a19-a11757e1e2b2}</Project>
+      <Name>z.Foundation</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
