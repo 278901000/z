@@ -38,8 +38,9 @@
       <HintPath>..\..\packages\Enyim.Caching.Web.1.0.0.1\lib\net40\Enyim.Caching.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Gif.Components">
-      <HintPath>..\..\packages\Gif.Components.dll</HintPath>
+    <Reference Include="Gif.Components, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Gif.Components.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>

@@ -99,6 +99,7 @@
     <Compile Include="Controllers\ApiCenterController.cs" />
     <Compile Include="Controllers\ClientManageController.cs" />
     <Compile Include="Controllers\FunctionManageController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SystemManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -121,6 +122,8 @@
     <Content Include="Views\ClientManage\List.cshtml" />
     <Content Include="Views\FunctionManage\List.cshtml" />
     <Content Include="Views\FunctionManage\Operate.cshtml" />
+    <None Include="Properties\PublishProfiles\com.apicenter.www.pubxml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
