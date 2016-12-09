@@ -25,8 +25,6 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            //test
-
             //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
 
 
