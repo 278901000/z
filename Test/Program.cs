@@ -27,6 +27,8 @@ namespace Test
         {
             //hello world
 
+            //zengen
+
             //PanGu.Segment.Init(@"D:\project_about\file_server\pangu\PanGu.xml");
 
 
